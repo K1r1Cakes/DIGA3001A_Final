@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 136357990}
   m_Layer: 0
   m_Name: Med kit
-  m_TagString: Untagged
+  m_TagString: Medkit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -301,6 +301,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ccdd507fd69aca4aba39060b49e64d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
+  isMedkit: 0
+  panel: {fileID: 1578455789}
 --- !u!50 &136357991
 Rigidbody2D:
   serializedVersion: 5
@@ -3264,6 +3266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1730545320}
   - component: {fileID: 1730545321}
+  - component: {fileID: 1730545322}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: Untagged
@@ -3305,6 +3308,25 @@ MonoBehaviour:
   - {fileID: 1086059925}
   - {fileID: 1773527209}
   - {fileID: 466642227}
+--- !u!114 &1730545322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730545319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275a636562301b149b7fd6c246f9f00f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Playerthirst
+  playerThirst: 3
+  globalThirstTimer: 0
+  thirstTimer: 2
+  waterImage:
+  - {fileID: 537007037}
+  - {fileID: 1955799753}
+  - {fileID: 1840577629}
 --- !u!1 &1733380663
 GameObject:
   m_ObjectHideFlags: 0

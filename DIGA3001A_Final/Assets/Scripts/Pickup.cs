@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pickup : MonoBehaviour
 {
+    public bool isMedkit = false;
+    public GameObject panel;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,8 +21,20 @@ public class Pickup : MonoBehaviour
     {
         if (collide.CompareTag("Player"))
         {
-            Debug.Log("Picked up");
+            getTagName();
+            togglePanel();
             gameObject.SetActive(false);
         }
+    }
+
+    public void getTagName()
+    {
+        string tagName = gameObject.tag;
+        Debug.Log("Picked up "+tagName);
+    }
+
+    private void togglePanel()
+    {
+        panel.SetActive(true);
     }
 }
