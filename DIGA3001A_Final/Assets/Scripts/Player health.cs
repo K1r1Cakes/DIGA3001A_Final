@@ -8,6 +8,9 @@ public class Playerhealth : MonoBehaviour
     public float playerHealth = 3f;
     public Image[] heartImage;
     public TextMeshProUGUI deathText;
+    public Pickup pickup;
+    private bool isFilled = false;
+    public float healingTime;
     void Start()
     {
         
@@ -63,5 +66,16 @@ public class Playerhealth : MonoBehaviour
             heartImage[i].fillAmount = 0f; // empty heart
         }
     }
+    }
+
+    void heartHeal()
+    {
+        isFilled = false;
+        for (int i = 0; i < heartImage.Length; i++)
+        {
+            //heart fills up and stops losing health using delta time.
+
+        }
+        isFilled = true;
     }
 }

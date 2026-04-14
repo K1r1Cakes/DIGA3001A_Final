@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class Pickup : MonoBehaviour
 {
     public bool isMedkit = false;
+    public string tagName;
     public GameObject panel;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,7 +15,10 @@ public class Pickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (tagName == "Medkit")
+        {
+            isMedkit = true;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collide)
@@ -22,19 +26,14 @@ public class Pickup : MonoBehaviour
         if (collide.CompareTag("Player"))
         {
             getTagName();
-            togglePanel();
             gameObject.SetActive(false);
         }
     }
 
     public void getTagName()
     {
-        string tagName = gameObject.tag;
+        tagName = gameObject.tag;
         Debug.Log("Picked up "+tagName);
     }
 
-    private void togglePanel()
-    {
-        panel.SetActive(true);
-    }
 }
