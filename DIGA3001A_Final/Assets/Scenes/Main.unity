@@ -3301,7 +3301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c2506b613ffe64e8b779456be032b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Playerhunger
-  hungerTimer: 2
+  hungerTimer: 5
   globalTimer: 0
   playerHunger: 3
   hungerImage:
@@ -3328,6 +3328,7 @@ MonoBehaviour:
   - {fileID: 537007037}
   - {fileID: 1955799753}
   - {fileID: 1840577629}
+  playerhealth: {fileID: 1198829196}
 --- !u!1 &1733380663
 GameObject:
   m_ObjectHideFlags: 0
