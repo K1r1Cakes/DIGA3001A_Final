@@ -35,7 +35,7 @@ public class Playerhealth : MonoBehaviour
         }
     }
 
-    void playerDamage()
+    public void playerDamage()
     {
         playerHealth -= 0.5f ;
         heartFill();
