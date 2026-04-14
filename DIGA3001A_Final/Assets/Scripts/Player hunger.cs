@@ -77,4 +77,19 @@ public class Playerhunger : MonoBehaviour
             }
         }
     }
+
+    public void restoreHunger(float hungerAmount)
+    {
+        if (playerHunger < hungerImage.Length)
+        {
+            playerHunger += hungerAmount;
+        }
+
+        if(playerHunger > hungerImage.Length)
+        {
+            playerHunger = hungerImage.Length;
+        }
+
+        hungerFill();
+    }
 }
