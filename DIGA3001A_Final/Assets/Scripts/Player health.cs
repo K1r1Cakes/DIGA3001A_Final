@@ -10,6 +10,8 @@ public class Playerhealth : MonoBehaviour
     public Pickup pickup;
     public bool isHealth = false;
     public AudioSource audioSource;
+    public AudioSource heartbeatSource;
+    public AudioSource endGame;
    
     void Start()
     {
@@ -36,6 +38,7 @@ public class Playerhealth : MonoBehaviour
             {
                 Debug.Log("Player is dead");
                 deathText.text = "Player is dead";
+                endGame.Play();
             }
 
         }
@@ -45,19 +48,29 @@ public class Playerhealth : MonoBehaviour
     {
         playerHealth -= 0.5f ;
         audioSource.Play();
+
         if (playerHealth <= 1f)
         {
             deathText.text = "You are low on health. Heal now!";
-           isHealth = true;
+
+            if (!heartbeatSource.isPlaying)
+            {
+               heartbeatSource.Play(); 
+            }
+            
+            isHealth = true;
         }
         else
         {
             isHealth = false;
+            heartbeatSource.Stop();
         }
 
         if (playerHealth < 0)
         {
             playerHealth = 0;
+            audioSource.Stop();
+            heartbeatSource.Stop();
         }
 
         heartFill();
@@ -96,6 +109,11 @@ public class Playerhealth : MonoBehaviour
             playerHealth = heartImage.Length;
         }
 
+        if (playerHealth > 1f)
+        {
+            heartbeatSource.Stop();
+            isHealth =false;
+        }
         heartFill();
     }
 }
