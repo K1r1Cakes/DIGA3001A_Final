@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Playerhunger : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Playerhunger : MonoBehaviour
     public float playerHunger = 3f;
     public Image[] hungerImage;
     public Playerhealth playerhealth;
+    public TextMeshProUGUI hungerText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -41,11 +43,16 @@ public class Playerhunger : MonoBehaviour
     {
         playerHunger -= 0.5f;
 
+        if (playerHunger == 1)
+        {
+            hungerText.text = "You are starving. Eat now!";
+        }
+
         if (playerHunger < 0)
         {
             playerHunger = 0;
         }
-        
+
         hungerFill();
     }
     void hungerFill()

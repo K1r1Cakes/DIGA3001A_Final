@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Playerthirst : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Playerthirst : MonoBehaviour
     public float thirstTimer = 2f;
     public Image[] waterImage;
     public Playerhealth playerhealth;
+    public TextMeshProUGUI textThirst;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,11 +26,12 @@ public class Playerthirst : MonoBehaviour
             if (playerThirst > 0)
             {
               loseThirst();
-             globalThirstTimer = thirstTimer;  
+              globalThirstTimer = thirstTimer;  
             }
             else
             {
              Debug.Log("Player is thirsty!");
+            
              playerhealth.playerDamage();
             }
             globalThirstTimer = thirstTimer;
@@ -39,9 +42,18 @@ public class Playerthirst : MonoBehaviour
     {
         playerThirst -= 0.5f;
 
+        if (playerThirst == 1)
+        {
+            textThirst.text = "You are dehydrated! Drink water now";
+        }
+
         if (playerThirst < 0)
         {
             playerThirst = 0;
+        }
+            if (playerThirst == 0)
+        {
+            globalThirstTimer = 0;
         }
 
         thisrtFill();

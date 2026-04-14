@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Playerhealth : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public float playerHealth = 3f;
     public Image[] heartImage;
+    public TextMeshProUGUI deathText;
     void Start()
     {
         
@@ -30,6 +32,7 @@ public class Playerhealth : MonoBehaviour
             else 
             {
                 Debug.Log("Player is dead");
+                deathText.text = "Player is dead";
             }
 
         }
