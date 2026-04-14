@@ -2840,6 +2840,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93e9740499db599409c3e710175c6200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  moveSpeed: 5
+  thirst: {fileID: 1730545322}
+  health: {fileID: 1198829196}
+  hunger: {fileID: 1730545321}
 --- !u!114 &1198829191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3043,7 +3047,7 @@ MonoBehaviour:
   - {fileID: 800551156}
   deathText: {fileID: 1860734188}
   pickup: {fileID: 0}
-  healingTime: 0
+  isHealth: 0
 --- !u!1 &1211748298
 GameObject:
   m_ObjectHideFlags: 0
@@ -4713,7 +4717,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c2506b613ffe64e8b779456be032b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Playerhunger
-  hungerTimer: 3
+  playerMovement: {fileID: 1198829190}
+  hungerTimer: 5
   globalTimer: 0
   playerHunger: 3
   hungerImage:
@@ -4722,6 +4727,7 @@ MonoBehaviour:
   - {fileID: 466642227}
   playerhealth: {fileID: 1198829196}
   hungerText: {fileID: 460324021}
+  isHungry: 0
 --- !u!114 &1730545322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4736,13 +4742,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Playerthirst
   playerThirst: 3
   globalThirstTimer: 0
-  thirstTimer: 2
+  thirstTimer: 3
   waterImage:
   - {fileID: 537007037}
   - {fileID: 1955799753}
   - {fileID: 1840577629}
   playerhealth: {fileID: 1198829196}
   textThirst: {fileID: 460324021}
+  isThirsty: 0
 --- !u!1 &1733380663
 GameObject:
   m_ObjectHideFlags: 0

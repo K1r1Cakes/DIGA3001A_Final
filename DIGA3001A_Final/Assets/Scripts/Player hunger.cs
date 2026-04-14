@@ -4,12 +4,14 @@ using TMPro;
 
 public class Playerhunger : MonoBehaviour
 {
+    public PlayerMovement playerMovement;
     public float hungerTimer = 5f;
     public float globalTimer;
     public float playerHunger = 3f;
     public Image[] hungerImage;
     public Playerhealth playerhealth;
     public TextMeshProUGUI hungerText;
+    public bool isHungry = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -43,9 +45,14 @@ public class Playerhunger : MonoBehaviour
     {
         playerHunger -= 0.5f;
 
-        if (playerHunger == 1)
+        if (playerHunger <= 1)
         {
             hungerText.text = "You are starving. Eat now!";
+            isHungry = true;
+        }
+        else
+        {
+            isHungry = false;
         }
 
         if (playerHunger < 0)
@@ -89,6 +96,7 @@ public class Playerhunger : MonoBehaviour
         {
             playerHunger = hungerImage.Length;
         }
+
 
         hungerFill();
     }

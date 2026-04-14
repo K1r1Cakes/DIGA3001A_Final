@@ -4,13 +4,12 @@ using TMPro;
 
 public class Playerhealth : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public float playerHealth = 3f;
     public Image[] heartImage;
     public TextMeshProUGUI deathText;
     public Pickup pickup;
-    private bool isFilled = false;
-    public float healingTime;
+    public bool isHealth = false;
+   
     void Start()
     {
         
@@ -44,6 +43,22 @@ public class Playerhealth : MonoBehaviour
     public void playerDamage()
     {
         playerHealth -= 0.5f ;
+
+        if (playerHealth <= 1f)
+        {
+            deathText.text = "You are low on health. Heal now!";
+           isHealth = true;
+        }
+        else
+        {
+            isHealth = false;
+        }
+
+        if (playerHealth < 0)
+        {
+            playerHealth = 0;
+        }
+
         heartFill();
     }
 

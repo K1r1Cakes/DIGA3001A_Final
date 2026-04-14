@@ -10,6 +10,7 @@ public class Playerthirst : MonoBehaviour
     public Image[] waterImage;
     public Playerhealth playerhealth;
     public TextMeshProUGUI textThirst;
+    public bool isThirsty = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,7 +32,6 @@ public class Playerthirst : MonoBehaviour
             else
             {
              Debug.Log("Player is thirsty!");
-            
              playerhealth.playerDamage();
             }
             globalThirstTimer = thirstTimer;
@@ -42,9 +42,14 @@ public class Playerthirst : MonoBehaviour
     {
         playerThirst -= 0.5f;
 
-        if (playerThirst == 1)
+        if (playerThirst <= 1)
         {
             textThirst.text = "You are dehydrated! Drink water now";
+            isThirsty = true;
+        }
+        else
+        {
+            isThirsty = false;
         }
 
         if (playerThirst < 0)
@@ -87,5 +92,8 @@ public class Playerthirst : MonoBehaviour
         {
             playerThirst = waterImage.Length;
         }
+
+        thisrtFill();
+
     }
 }
