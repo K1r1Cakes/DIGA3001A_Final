@@ -9,6 +9,7 @@ public class Playerhealth : MonoBehaviour
     public TextMeshProUGUI deathText;
     public Pickup pickup;
     public bool isHealth = false;
+    public AudioSource audioSource;
    
     void Start()
     {
@@ -43,7 +44,7 @@ public class Playerhealth : MonoBehaviour
     public void playerDamage()
     {
         playerHealth -= 0.5f ;
-
+        audioSource.Play();
         if (playerHealth <= 1f)
         {
             deathText.text = "You are low on health. Heal now!";

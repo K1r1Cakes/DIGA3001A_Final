@@ -7,6 +7,7 @@ public class Pickup : MonoBehaviour
     public string tagName;
     public GameObject panel;
     public Playerhealth playerhealth;
+    public AudioSource audioSource;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,7 +25,7 @@ public class Pickup : MonoBehaviour
         if (collide.CompareTag("Player"))
         {
             getTagName();
-
+            audioSource.Play();
             if (playerhealth != null)
             {
                 playerhealth.heartHeal();

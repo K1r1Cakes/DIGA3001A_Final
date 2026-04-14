@@ -4,6 +4,7 @@ public class FoodPickup : MonoBehaviour
 {
     public float hungerAmount = 0.5f;
     public Playerhunger playerhunger;
+    public AudioSource audioSource;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,6 +22,7 @@ public class FoodPickup : MonoBehaviour
         if (collide.CompareTag("Player"))
         {
             playerhunger.restoreHunger(hungerAmount);
+            audioSource.Play();
             Debug.Log("Food picked up");
         }
     }
