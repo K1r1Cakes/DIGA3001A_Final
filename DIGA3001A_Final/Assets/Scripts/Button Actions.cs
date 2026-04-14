@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class ButtonActions : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -21,5 +21,10 @@ public class ButtonActions : MonoBehaviour
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
+    }
+
+    public void onResetClick()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
