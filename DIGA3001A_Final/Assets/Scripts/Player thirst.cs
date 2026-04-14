@@ -51,10 +51,6 @@ public class Playerthirst : MonoBehaviour
         {
             playerThirst = 0;
         }
-            if (playerThirst == 0)
-        {
-            globalThirstTimer = 0;
-        }
 
         thisrtFill();
     }
@@ -77,6 +73,19 @@ public class Playerthirst : MonoBehaviour
             {
                 waterImage[i].fillAmount =0f;
             }
+        }
+    }
+
+    public void restoreThirst(float thirstAmount)
+    {
+        if (playerThirst < waterImage.Length)
+        {
+            playerThirst += thirstAmount;
+        }
+
+        if (playerThirst > waterImage.Length)
+        {
+            playerThirst = waterImage.Length;
         }
     }
 }
