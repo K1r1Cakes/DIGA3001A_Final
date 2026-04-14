@@ -68,14 +68,18 @@ public class Playerhealth : MonoBehaviour
     }
     }
 
-    void heartHeal()
+    public void heartHeal()
     {
-        isFilled = false;
-        for (int i = 0; i < heartImage.Length; i++)
+        if (playerHealth < heartImage.Length)
         {
-            //heart fills up and stops losing health using delta time.
-
+            playerHealth += 0.5f;
         }
-        isFilled = true;
+
+        if (playerHealth > heartImage.Length)
+        {
+            playerHealth = heartImage.Length;
+        }
+
+        heartFill();
     }
 }

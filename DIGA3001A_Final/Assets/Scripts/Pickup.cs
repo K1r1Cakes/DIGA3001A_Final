@@ -6,6 +6,7 @@ public class Pickup : MonoBehaviour
     public bool isMedkit = false;
     public string tagName;
     public GameObject panel;
+    public Playerhealth playerhealth;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,10 +16,7 @@ public class Pickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (tagName == "Medkit")
-        {
-            isMedkit = true;
-        }
+    
     }
 
     private void OnTriggerEnter2D(Collider2D collide)
@@ -26,7 +24,12 @@ public class Pickup : MonoBehaviour
         if (collide.CompareTag("Player"))
         {
             getTagName();
-            gameObject.SetActive(false);
+
+            if (playerhealth != null)
+            {
+                playerhealth.heartHeal();
+            }
+           // gameObject.SetActive(false);
         }
     }
 

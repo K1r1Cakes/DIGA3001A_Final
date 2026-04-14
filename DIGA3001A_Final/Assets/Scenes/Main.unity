@@ -304,6 +304,7 @@ MonoBehaviour:
   isMedkit: 0
   tagName: 
   panel: {fileID: 1578455789}
+  playerhealth: {fileID: 1198829196}
 --- !u!50 &136357991
 Rigidbody2D:
   serializedVersion: 5
