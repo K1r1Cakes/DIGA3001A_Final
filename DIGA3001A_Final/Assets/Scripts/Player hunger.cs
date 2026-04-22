@@ -8,8 +8,7 @@ public class Playerhunger : MonoBehaviour
     public float globalTimer;
     public float playerHunger = 3f;
     public Image[] hungerImage;
-    public Playerhealth playerhealth;
-    public TextMeshProUGUI hungerText;
+   
     public bool isHungry = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,7 +31,7 @@ public class Playerhunger : MonoBehaviour
             else
             {
              Debug.Log("Player starved to death");
-             playerhealth.playerDamage();
+             //playerhealth.playerDamage();
             }
             globalTimer = hungerTimer;
         }
@@ -46,7 +45,7 @@ public class Playerhunger : MonoBehaviour
 
         if (playerHunger <= 1)
         {
-            hungerText.text = "You are starving. Eat now!";
+           // hungerText.text = "You are starving. Eat now!";
             isHungry = true;
         }
         else
