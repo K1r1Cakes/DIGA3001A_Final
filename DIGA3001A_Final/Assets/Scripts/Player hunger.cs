@@ -7,7 +7,7 @@ public class Playerhunger : MonoBehaviour
     public float hungerTimer = 5f;
     public float globalTimer;
     public float playerHunger = 3f;
-    public Image[] hungerImage;
+    public Image hungerImage;
    
     public bool isHungry = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,7 +25,7 @@ public class Playerhunger : MonoBehaviour
         {
             if (playerHunger > 0)
             {
-              loseHunger();
+             // loseHunger();
               globalTimer = hungerTimer;  
             }
             else
@@ -39,63 +39,63 @@ public class Playerhunger : MonoBehaviour
         
     }
 
-    void loseHunger()
-    {
-        playerHunger -= 0.5f;
+//     void loseHunger()
+//     {
+//         playerHunger -= 0.5f;
 
-        if (playerHunger <= 1)
-        {
-           // hungerText.text = "You are starving. Eat now!";
-            isHungry = true;
-        }
-        else
-        {
-            isHungry = false;
-        }
+//         if (playerHunger <= 1)
+//         {
+//            // hungerText.text = "You are starving. Eat now!";
+//             isHungry = true;
+//         }
+//         else
+//         {
+//             isHungry = false;
+//         }
 
-        if (playerHunger < 0)
-        {
-            playerHunger = 0;
-        }
+//         if (playerHunger < 0)
+//         {
+//             playerHunger = 0;
+//         }
 
-        hungerFill();
-    }
-    void hungerFill()
-    {
-        Debug.Log("Half hunger bar");
+//         hungerFill();
+//     }
+//     void hungerFill()
+//     {
+//         Debug.Log("Half hunger bar");
 
-        for(int i = 0; i < hungerImage.Length; i++)
-        {
-            float remainingHunger = playerHunger - i;
+//         for(int i = 0; i < hungerImage.Length; i++)
+//         {
+//             float remainingHunger = playerHunger - i;
 
-            if (remainingHunger >= 1)
-            {
-                hungerImage[i].fillAmount = 1f;
-            }
-            else if(remainingHunger > 0)
-            {
-                hungerImage[i].fillAmount = 0.5f;
-            }
-            else
-            {
-                hungerImage[i].fillAmount =0f;
-            }
-        }
-    }
+//             if (remainingHunger >= 1)
+//             {
+//                 hungerImage[i].fillAmount = 1f;
+//             }
+//             else if(remainingHunger > 0)
+//             {
+//                 hungerImage[i].fillAmount = 0.5f;
+//             }
+//             else
+//             {
+//                 hungerImage[i].fillAmount =0f;
+//             }
+//         }
+//     }
 
-    public void restoreHunger(float hungerAmount)
-    {
-        if (playerHunger < hungerImage.Length)
-        {
-            playerHunger += hungerAmount;
-        }
+//     public void restoreHunger(float hungerAmount)
+//     {
+//         if (playerHunger < hungerImage.Length)
+//         {
+//             playerHunger += hungerAmount;
+//         }
 
-        if(playerHunger > hungerImage.Length)
-        {
-            playerHunger = hungerImage.Length;
-        }
+//         if(playerHunger > hungerImage.Length)
+//         {
+//             playerHunger = hungerImage.Length;
+//         }
 
 
-        hungerFill();
-    }
-}
+//         hungerFill();
+//     }
+ }

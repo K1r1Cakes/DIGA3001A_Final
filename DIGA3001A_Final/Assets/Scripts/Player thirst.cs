@@ -7,9 +7,9 @@ public class Playerthirst : MonoBehaviour
     public float playerThirst = 3f;
     public float globalThirstTimer;
     public float thirstTimer = 2f;
-    public Image[] waterImage;
+    public Image waterImage;
     //public Playerhealth playerhealth;
-    public TextMeshProUGUI textThirst;
+    
     public bool isThirsty = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,7 +44,7 @@ public class Playerthirst : MonoBehaviour
 
         if (playerThirst <= 1)
         {
-            textThirst.text = "You are dehydrated! Drink water now";
+           // textThirst.text = "You are dehydrated! Drink water now";
             isThirsty = true;
         }
         else
@@ -57,43 +57,43 @@ public class Playerthirst : MonoBehaviour
             playerThirst = 0;
         }
 
-        thisrtFill();
+        //thisrtFill();
     }
 
-    void thisrtFill()
-    {
-        for(int i = 0; i < waterImage.Length; i++)
-        {
-            float remainingThirst = playerThirst - i;
+    // void thisrtFill()
+    // {
+    //     for(int i = 0; i < waterImage.Length; i++)
+    //     {
+    //         float remainingThirst = playerThirst - i;
 
-            if (remainingThirst >= 1)
-            {
-                waterImage[i].fillAmount = 1f;
-            }
-            else if(remainingThirst > 0)
-            {
-                waterImage[i].fillAmount = 0.5f;
-            }
-            else
-            {
-                waterImage[i].fillAmount =0f;
-            }
-        }
-    }
+    //         if (remainingThirst >= 1)
+    //         {
+    //             waterImage[i].fillAmount = 1f;
+    //         }
+    //         else if(remainingThirst > 0)
+    //         {
+    //             waterImage[i].fillAmount = 0.5f;
+    //         }
+    //         else
+    //         {
+    //             waterImage[i].fillAmount =0f;
+    //         }
+    //     }
+    // }
 
-    public void restoreThirst(float thirstAmount)
-    {
-        if (playerThirst < waterImage.Length)
-        {
-            playerThirst += thirstAmount;
-        }
+    // public void restoreThirst(float thirstAmount)
+    // {
+    //     if (playerThirst < waterImage.Length)
+    //     {
+    //         playerThirst += thirstAmount;
+    //     }
 
-        if (playerThirst > waterImage.Length)
-        {
-            playerThirst = waterImage.Length;
-        }
+    //     if (playerThirst > waterImage.Length)
+    //     {
+    //         playerThirst = waterImage.Length;
+    //     }
 
-        thisrtFill();
+    //     thisrtFill();
 
-    }
+    // }
 }
