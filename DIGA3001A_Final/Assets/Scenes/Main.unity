@@ -5582,10 +5582,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c2506b613ffe64e8b779456be032b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Playerhunger
-  playerMovement: {fileID: 1198829190}
   hungerTimer: 5
   globalTimer: 0
-  playerHunger: 3
+  playerHunger: 100
   hungerImage:
   - {fileID: 1086059925}
   - {fileID: 1773527209}
@@ -5607,7 +5606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Playerthirst
   playerThirst: 3
   globalThirstTimer: 0
-  thirstTimer: 3
+  thirstTimer: 100
   waterImage:
   - {fileID: 537007037}
   - {fileID: 1955799753}

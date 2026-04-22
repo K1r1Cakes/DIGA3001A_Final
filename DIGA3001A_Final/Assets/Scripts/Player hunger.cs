@@ -4,7 +4,6 @@ using TMPro;
 
 public class Playerhunger : MonoBehaviour
 {
-    public PlayerMovement playerMovement;
     public float hungerTimer = 5f;
     public float globalTimer;
     public float playerHunger = 3f;
