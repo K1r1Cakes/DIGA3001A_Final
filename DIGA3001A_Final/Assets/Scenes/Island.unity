@@ -1746,6 +1746,7 @@ GameObject:
   - component: {fileID: 1758853463}
   - component: {fileID: 1758853465}
   - component: {fileID: 1758853464}
+  - component: {fileID: 1758853466}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: Untagged
@@ -1802,6 +1803,22 @@ MonoBehaviour:
   playerHunger: 3
   hungerImage: {fileID: 764702728}
   isHungry: 0
+--- !u!114 &1758853466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758853462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d1ae6b033f710943993f3617c0a1cb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryController
+  inventoryPanel: {fileID: 1874472225}
+  slotPrefab: {fileID: 5207264569799936710, guid: 9da7518ac37349240bcf76062a5c43ce, type: 3}
+  slotCount: 10
+  itemPrefab: []
 --- !u!1 &1874472225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1837,7 +1854,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -8.3409, y: 9.9334}
+  m_AnchoredPosition: {x: -8.340881, y: 9.933411}
   m_SizeDelta: {x: -884.0756, y: -589.8683}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1874472227
