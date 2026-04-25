@@ -5,11 +5,13 @@ using UnityEngine.InputSystem;
 public class ItemCollection : MonoBehaviour
 {
     private bool isNear = false;
-    public GameObject itemPrefab;
+    private GameObject itemPrefab;
+    private InventoryController inventoryController;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        inventoryController = FindObjectOfType<InventoryController>();
     }
 
     // Update is called once per frame
@@ -20,11 +22,11 @@ public class ItemCollection : MonoBehaviour
 
     public void onCollect(InputAction.CallbackContext context)
     {
-        //Pickup
-
-        if (isNear == true)
+       if (isNear == true)
         {
-            itemPrefab.SetActive(false);
+            inventoryController.AddItem(itemPrefab);
+            Destroy(itemPrefab);
+            isNear = false;
         }
     }
 
@@ -32,7 +34,10 @@ public class ItemCollection : MonoBehaviour
     {
         if (collide.CompareTag("Medkit"))
         {
-            isNear = true;
+
+           itemPrefab = collide.gameObject;
+           isNear = true;
+           
         }
     }
 }

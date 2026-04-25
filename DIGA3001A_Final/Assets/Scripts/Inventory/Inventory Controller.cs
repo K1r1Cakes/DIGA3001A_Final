@@ -5,20 +5,37 @@ public class InventoryController : MonoBehaviour
     public GameObject inventoryPanel;
     public GameObject slotPrefab;
     public int slotCount;
-    public GameObject[] itemPrefab;
+    public GameObject[] itemPrefabs;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         for(int i = 0; i < slotCount; i++)
         {
           Slot slot = Instantiate(slotPrefab, inventoryPanel.transform).GetComponent<Slot>();
-          if (i < itemPrefab.Length)
+          if (i < itemPrefabs.Length)
             {
-                GameObject item = Instantiate(itemPrefab[i], slot.transform);
+                GameObject item = Instantiate(itemPrefabs[i], slot.transform);
                 item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
                 slot.currentItem = item;
             }
         }
+    }
+
+    public bool AddItem(GameObject itemPrefab)
+    {
+        //Look for empty slot
+        foreach(Transform slotTransform in inventoryPanel.transform)
+        {
+            Slot slot = slotTransform.GetComponent<Slot>();
+            if (slot != null && slot.currentItem == null)
+            {
+                GameObject newItem = Instantiate(itemPrefab, slot.transform);
+                newItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+                slot.currentItem = newItem;
+                return true;
+            }
+        }
+        return false;
     }
 
     
