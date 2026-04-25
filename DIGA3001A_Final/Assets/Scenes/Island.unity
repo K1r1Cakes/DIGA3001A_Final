@@ -1815,8 +1815,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Playerhunger
   hungerTimer: 5
   globalTimer: 0
-  playerHunger: 3
-  hungerImage: {fileID: 764702728}
+  hungerAmount: 100
+  hungerDamage: 10
+  hungerBar: {fileID: 764702728}
   isHungry: 0
 --- !u!114 &1758853466
 MonoBehaviour:

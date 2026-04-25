@@ -6,8 +6,9 @@ public class Playerhunger : MonoBehaviour
 {
     public float hungerTimer = 5f;
     public float globalTimer;
-    public float playerHunger = 3f;
-    public Image hungerImage;
+    public float hungerAmount = 100f;
+    public float hungerDamage = 10f;
+    public Image hungerBar;
    
     public bool isHungry = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,9 +24,9 @@ public class Playerhunger : MonoBehaviour
 
         if(globalTimer <= 0)
         {
-            if (playerHunger > 0)
+            if (hungerAmount > 0)
             {
-             // loseHunger();
+             loseHunger(hungerDamage);
               globalTimer = hungerTimer;  
             }
             else
@@ -41,7 +42,7 @@ public class Playerhunger : MonoBehaviour
 
 //     void loseHunger()
 //     {
-//         playerHunger -= 0.5f;
+//         playerHunger -= 10f;
 
 //         if (playerHunger <= 1)
 //         {
@@ -62,7 +63,7 @@ public class Playerhunger : MonoBehaviour
 //     }
 //     void hungerFill()
 //     {
-//         Debug.Log("Half hunger bar");
+//      
 
 //         for(int i = 0; i < hungerImage.Length; i++)
 //         {
@@ -98,4 +99,10 @@ public class Playerhunger : MonoBehaviour
 
 //         hungerFill();
 //     }
+
+    public void loseHunger(float hunger)
+    {
+        hungerAmount -= hunger;
+        hungerBar.fillAmount = hungerAmount/100f;
+    }
  }
