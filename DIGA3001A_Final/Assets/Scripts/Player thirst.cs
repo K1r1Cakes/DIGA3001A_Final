@@ -4,10 +4,11 @@ using TMPro;
 
 public class Playerthirst : MonoBehaviour
 {
-    public float playerThirst = 3f;
+    public float thirstAmount = 100f;
+    public float thirstDamage = 10f;
     public float globalThirstTimer;
     public float thirstTimer = 2f;
-    public Image waterImage;
+    public Image thirstBar;
     //public Playerhealth playerhealth;
     
     public bool isThirsty = false;
@@ -24,9 +25,9 @@ public class Playerthirst : MonoBehaviour
 
         if(globalThirstTimer <= 0)
         {
-            if (playerThirst > 0)
+            if (thirstAmount > 0)
             {
-              loseThirst();
+              loseThirst(thirstDamage);
               globalThirstTimer = thirstTimer;  
             }
             else
@@ -38,27 +39,27 @@ public class Playerthirst : MonoBehaviour
         }
     }
 
-    void loseThirst()
-    {
-        playerThirst -= 0.5f;
+    // void loseThirst()
+    // {
+    //     playerThirst -= 0.5f;
 
-        if (playerThirst <= 1)
-        {
-           // textThirst.text = "You are dehydrated! Drink water now";
-            isThirsty = true;
-        }
-        else
-        {
-            isThirsty = false;
-        }
+    //     if (playerThirst <= 1)
+    //     {
+    //        // textThirst.text = "You are dehydrated! Drink water now";
+    //         isThirsty = true;
+    //     }
+    //     else
+    //     {
+    //         isThirsty = false;
+    //     }
 
-        if (playerThirst < 0)
-        {
-            playerThirst = 0;
-        }
+    //     if (playerThirst < 0)
+    //     {
+    //         playerThirst = 0;
+    //     }
 
-        //thisrtFill();
-    }
+    //     //thisrtFill();
+    // }
 
     // void thisrtFill()
     // {
@@ -96,4 +97,10 @@ public class Playerthirst : MonoBehaviour
     //     thisrtFill();
 
     // }
+
+    public void loseThirst(float thirst)
+    {
+        thirstAmount -= thirst;
+        thirstBar.fillAmount = thirstAmount/100f;
+    }
 }

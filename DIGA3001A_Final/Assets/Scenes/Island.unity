@@ -1796,10 +1796,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 275a636562301b149b7fd6c246f9f00f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Playerthirst
-  playerThirst: 3
+  thirstAmount: 100
+  thirstDamage: 10
   globalThirstTimer: 0
   thirstTimer: 2
-  waterImage: {fileID: 0}
+  thirstBar: {fileID: 1141798497}
   isThirsty: 0
 --- !u!114 &1758853465
 MonoBehaviour:
