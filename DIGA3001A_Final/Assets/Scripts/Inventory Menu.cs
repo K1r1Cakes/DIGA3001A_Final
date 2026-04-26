@@ -1,3 +1,4 @@
+using UnityEditor.U2D.Tooling.Analyzer;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -19,10 +20,14 @@ public class InventoryMenu : MonoBehaviour
 
     public void onOpenInventory(InputAction.CallbackContext context)
     {
+        if (!context.performed) return;
         if (panel != null)
         {
             bool isActive = panel.activeSelf;
             panel.SetActive(!isActive);
+
+
+            PauseController.SetPause(!isActive);
         }
     }
 }
