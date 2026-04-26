@@ -21,6 +21,11 @@ public class Playerthirst : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PauseController.isGamePaused)
+        {
+            return;
+        }
+        
         globalThirstTimer -= Time.deltaTime;
 
         if(globalThirstTimer <= 0)

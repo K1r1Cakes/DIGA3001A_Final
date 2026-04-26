@@ -20,13 +20,18 @@ public class Playerhunger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PauseController.isGamePaused)
+        {
+            return;
+        }
+        
         globalTimer -= Time.deltaTime;
 
         if(globalTimer <= 0)
         {
             if (hungerAmount > 0)
             {
-             loseHunger(hungerDamage);
+              loseHunger(hungerDamage);
               globalTimer = hungerTimer;  
             }
             else
