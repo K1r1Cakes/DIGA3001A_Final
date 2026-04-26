@@ -32,7 +32,7 @@ public class ItemCollection : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collide)
     {
-        if (collide.CompareTag("Medkit"))
+        if (collide.CompareTag("Item"))
         {
 
            itemPrefab = collide.gameObject;
