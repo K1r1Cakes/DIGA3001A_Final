@@ -325,7 +325,7 @@ Transform:
   m_GameObject: {fileID: 594653308}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.39, y: 0.21, z: 0}
+  m_LocalPosition: {x: 0.848, y: 0.047, z: 0}
   m_LocalScale: {x: 0.8694, y: 0.2722, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1914,6 +1914,7 @@ GameObject:
   - component: {fileID: 1349631635}
   - component: {fileID: 1349631640}
   - component: {fileID: 1349631639}
+  - component: {fileID: 1349631641}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -2094,6 +2095,20 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1349631641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349631634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed4133c1d433464ba77973fa9969fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDamage
+  totalEnemyHealth: 30
+  enemyDamage: 10
 --- !u!1 &1363841031
 GameObject:
   m_ObjectHideFlags: 0
