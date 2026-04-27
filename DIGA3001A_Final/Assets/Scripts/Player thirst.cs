@@ -108,4 +108,18 @@ public class Playerthirst : MonoBehaviour
         thirstAmount -= thirst;
         thirstBar.fillAmount = thirstAmount/100f;
     }
+
+    public void fillThirst(float thirst)
+    {
+        if (thirstAmount < 100)
+        {
+            thirstAmount += thirst;
+            thirstBar.fillAmount = thirstAmount/100f;
+        }
+
+        if (thirstAmount > 100)
+        {
+            thirstAmount = 100;
+        }
+    }
 }

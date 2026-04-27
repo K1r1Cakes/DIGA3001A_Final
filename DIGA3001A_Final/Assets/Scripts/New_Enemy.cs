@@ -32,7 +32,7 @@ public class New_Enemy : MonoBehaviour
 
         agent.SetDestination(target.position);
          
-        agent.speed = 4f;
+        agent.speed = 2f;
 
     }
 
