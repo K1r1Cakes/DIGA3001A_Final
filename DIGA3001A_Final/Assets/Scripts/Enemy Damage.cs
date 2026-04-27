@@ -37,6 +37,7 @@ public class EnemyDamage : MonoBehaviour
             else
             {
                 Debug.Log("Enemy dead");
+                Destroy(this.gameObject);
             }
             
             
