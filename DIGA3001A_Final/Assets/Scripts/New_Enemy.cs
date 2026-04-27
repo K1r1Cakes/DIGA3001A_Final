@@ -5,11 +5,9 @@ public class New_Enemy : MonoBehaviour
 {
    public Transform target;
    private NavMeshAgent agent;
-    public GameObject panel;
-    public GameObject loseText;
-    public GameObject winText;
+  
 
-    public float speedRate;
+
 
      Rigidbody2D rb;
 
@@ -34,27 +32,13 @@ public class New_Enemy : MonoBehaviour
 
         agent.SetDestination(target.position);
          
-        agent.speed += speedRate*Time.deltaTime;
+        agent.speed = 4f;
 
     }
 
     
-     private void OnCollisionEnter2D(Collision2D collision)
-    {
-       if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Caught Player");
-            panel.SetActive(true);
-            loseText.SetActive(true);
-            winText.SetActive(false);
-            
-        }
-    }
+   
 
-    public void resetSpeed()
-    {
-        agent.speed = 2f;
-    }
 }
 
 

@@ -3,11 +3,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-   private float moveSpeed = 4f;
-   private Rigidbody2D rb;
-   private Vector2 moveInput;
-   public float rotationSpeed;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private float moveSpeed = 5f;
+    private Rigidbody2D rb;
+    private Vector2 moveInput;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -18,27 +16,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if (PauseController.isGamePaused)
         {
-            rb.linearVelocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero; //Stop movement
             return;
         }
-        
         rb.linearVelocity = moveInput * moveSpeed;
-        RotateInDirectionOfInput();
     }
 
-   public void Move(InputAction.CallbackContext context)
+     public void Move(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
     }
-
-    private void RotateInDirectionOfInput()
-    {
-        if (moveInput != Vector2.zero)
-        {
-            Quaternion targetRotation = Quaternion.LookRotation(transform.forward, moveInput);
-            Quaternion rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-
-            rb.MoveRotation(rotation);
-        }
-    }
 }
+
