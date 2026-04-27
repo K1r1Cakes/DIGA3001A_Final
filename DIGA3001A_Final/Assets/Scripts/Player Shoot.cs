@@ -28,7 +28,7 @@ public class PlayerShoot : MonoBehaviour
             return;
          }
         
-        Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        Instantiate(bulletPrefab, transform.position, transform.rotation);
        // audioSource.Play();
     }
 }
