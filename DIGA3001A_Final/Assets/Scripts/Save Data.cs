@@ -5,4 +5,5 @@ public class SaveData
 {
    public Vector3 playerPosition;
    public List<InventorySaveData> inventorySaveData;
+   public List<InventorySaveData> hotbarSaveData;
 }

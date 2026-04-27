@@ -2177,8 +2177,10 @@ GameObject:
   - component: {fileID: 1615459530}
   - component: {fileID: 1615459532}
   - component: {fileID: 1615459531}
+  - component: {fileID: 1615459533}
+  - component: {fileID: 1615459534}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Hotbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2200,8 +2202,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 33, y: -412}
-  m_SizeDelta: {x: -1374.6582, y: -943.28}
+  m_AnchoredPosition: {x: -26.0804, y: -412}
+  m_SizeDelta: {x: -1263.9003, y: -943.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1615459531
 MonoBehaviour:
@@ -2241,6 +2243,47 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615459529}
   m_CullTransparentMesh: 1
+--- !u!114 &1615459533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615459529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f13c6a7a21699604fb14ce8a54dfa1ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotBarController
+  hotbarPanel: {fileID: 1615459529}
+  slotPrefab: {fileID: 5207264569799936710, guid: 9da7518ac37349240bcf76062a5c43ce, type: 3}
+  slotCount: 5
+--- !u!114 &1615459534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615459529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.HorizontalLayoutGroup
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &1621753133
 GameObject:
   m_ObjectHideFlags: 0
