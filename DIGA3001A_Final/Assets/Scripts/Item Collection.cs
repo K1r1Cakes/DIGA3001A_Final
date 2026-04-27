@@ -22,10 +22,13 @@ public class ItemCollection : MonoBehaviour
 
     public void onCollect(InputAction.CallbackContext context)
     {
-       if (isNear == true)
+        if(!context.performed) return;
+
+       if (isNear == true && itemPrefab != null)
         {
             inventoryController.AddItem(itemPrefab);
             Destroy(itemPrefab);
+            itemPrefab = null;
             isNear = false;
         }
     }
@@ -40,4 +43,15 @@ public class ItemCollection : MonoBehaviour
            
         }
     }
+
+    private void OnTriggerExit2D(Collider2D collide)
+    {
+        if (collide.CompareTag("Item"))
+    {
+        isNear = false;
+        itemPrefab = null;
+    }
+    }
+
+
 }
