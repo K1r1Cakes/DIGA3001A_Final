@@ -91,5 +91,29 @@ public class InventoryController : MonoBehaviour
         return false;
     }
 
-    
+public int GetItemCount(Item itemToCheck)
+{
+    int count = 0;
+
+    foreach (Transform slotTransform in inventoryPanel.transform)
+    {
+        Slot slot = slotTransform.GetComponent<Slot>();
+
+        if (slot != null && slot.currentItem != null)
+        {
+            Item item = slot.currentItem.GetComponent<Item>();
+
+            if (item.itemID == itemToCheck.itemID)
+            {
+                count++;
+            }
+        }
+    }
+
+    return count;
+}
+    public bool hasItem(Item itemToCheck, float requiredAmount)
+    {
+        return GetItemCount(itemToCheck) >= requiredAmount;
+    }
 }
