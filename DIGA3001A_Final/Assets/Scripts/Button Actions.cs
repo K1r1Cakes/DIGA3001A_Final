@@ -27,4 +27,9 @@ public class ButtonActions : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void onIslandClick()
+    {
+        SceneManager.LoadScene("Island");
+    }
 }
