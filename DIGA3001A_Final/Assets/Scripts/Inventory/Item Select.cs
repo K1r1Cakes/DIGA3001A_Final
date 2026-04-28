@@ -3,23 +3,34 @@ using UnityEngine.EventSystems;
 using TMPro;
 
 public class ItemSelect : MonoBehaviour, IPointerClickHandler
-{
+{   
     public Item items;
     public TextMeshProUGUI itemName;
+    public bool isItemSelected = false;
+    public UseItem useItem;
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Left)
         {
-           Slot slot = eventData.pointerEnter?.GetComponent<Slot>();
+           Slot slot = GetComponentInParent<Slot>();
 
-           if (slot != null)
+           if (slot != null  && slot.currentItem != null)
             {
-                GameObject item = eventData.pointerEnter;
+                Item itemData = slot.currentItem.GetComponent<Item>();
                 
+                if (itemData != null)
+                {
+                    items = itemData;
+                    itemName.text = items.itemName;
+
+                    useItem.currentItem = items;
+
+                     Debug.Log("Item selected");
+                     isItemSelected = true;
+                }
             }
 
-            Debug.Log("Item selected");
-            itemName.text = items.itemName;
+
 
         }
     }

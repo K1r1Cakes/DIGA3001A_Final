@@ -29,4 +29,18 @@ public class Playerhealth : MonoBehaviour
             Debug.Log("Lose");
         }
     }
+
+     public void fillHealth(float health)
+    {
+        if (healthAmount < 100)
+        {
+            healthAmount += health;
+            healthBar.fillAmount = healthAmount/100f;
+        }
+
+        if (healthAmount > 100)
+        {
+            healthAmount = 100;
+        }
+    }
 }

@@ -6,6 +6,7 @@ public class Playerthirst : MonoBehaviour
 {
     public float thirstAmount = 100f;
     public float thirstDamage = 10f;
+    public float thirstRegain = 10f;
     public float globalThirstTimer;
     public float thirstTimer = 2f;
     public Image thirstBar;
@@ -108,6 +109,7 @@ public class Playerthirst : MonoBehaviour
         thirstAmount -= thirst;
         thirstBar.fillAmount = thirstAmount/100f;
     }
+
 
     public void fillThirst(float thirst)
     {

@@ -110,4 +110,18 @@ public class Playerhunger : MonoBehaviour
         hungerAmount -= hunger;
         hungerBar.fillAmount = hungerAmount/100f;
     }
+
+     public void fillHunger(float hunger)
+    {
+        if (hungerAmount < 100)
+        {
+            hungerAmount += hunger;
+            hungerBar.fillAmount = hungerAmount/100f;
+        }
+
+        if (hungerAmount > 100)
+        {
+            hungerAmount = 100;
+        }
+    }
  }
