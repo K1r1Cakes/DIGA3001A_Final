@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3127992647198829383}
   - component: {fileID: 6235455049791182810}
   - component: {fileID: 6510156276712373115}
-  - component: {fileID: 3118537364331596410}
+  - component: {fileID: 3674218724903307543}
   m_Layer: 0
   m_Name: Water
   m_TagString: Item
@@ -206,7 +206,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!225 &3118537364331596410
+--- !u!225 &3674218724903307543
 CanvasGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
