@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.right * bulletSpeed * Time.deltaTime);
+        transform.Translate(transform.right * bulletSpeed * Time.deltaTime);
         if (transform.position.x > 8f)
         {
             Destroy(this.gameObject);
