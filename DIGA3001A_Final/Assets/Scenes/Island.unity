@@ -1131,7 +1131,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2679146164457720611, guid: 9b66189286cb1804fad628c8f3acd4ba, type: 3}
       propertyPath: itemName
-      value: Random
+      value: Water
       objectReference: {fileID: 0}
     - target: {fileID: 3099018982513038206, guid: 9b66189286cb1804fad628c8f3acd4ba, type: 3}
       propertyPath: m_Name
@@ -1410,7 +1410,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1137923078}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1758853469}
+        m_TargetAssemblyTypeName: UseItem, Assembly-CSharp
+        m_MethodName: OnUseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1137923078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3160,6 +3172,23 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1742028022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7987051013069600600, guid: 289391ae7fa2ebd43b2f3b88f9f30a6a, type: 3}
+  m_PrefabInstance: {fileID: 513709739006193820}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &1742028030
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742028022}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1758853462
 GameObject:
   m_ObjectHideFlags: 0
@@ -3174,6 +3203,7 @@ GameObject:
   - component: {fileID: 1758853466}
   - component: {fileID: 1758853467}
   - component: {fileID: 1758853468}
+  - component: {fileID: 1758853469}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: Untagged
@@ -3273,6 +3303,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571cbeaffc2399540957ba465372d21f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaveController
+--- !u!114 &1758853469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758853462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe347c121769d094483918024e4b7866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UseItem
+  item: {fileID: 648262708}
 --- !u!1 &1874472225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3469,13 +3512,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4305763796875203930, guid: 289391ae7fa2ebd43b2f3b88f9f30a6a, type: 3}
+      propertyPath: panel
+      value: 
+      objectReference: {fileID: 1539241546}
+    - target: {fileID: 4305763796875203930, guid: 289391ae7fa2ebd43b2f3b88f9f30a6a, type: 3}
+      propertyPath: itemName
+      value: 
+      objectReference: {fileID: 208448031}
     - target: {fileID: 5459212482412025504, guid: 289391ae7fa2ebd43b2f3b88f9f30a6a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5459212482412025504, guid: 289391ae7fa2ebd43b2f3b88f9f30a6a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.84
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5459212482412025504, guid: 289391ae7fa2ebd43b2f3b88f9f30a6a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3509,6 +3560,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7786443387935186131, guid: 289391ae7fa2ebd43b2f3b88f9f30a6a, type: 3}
+      propertyPath: itemID
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7987051013069600600, guid: 289391ae7fa2ebd43b2f3b88f9f30a6a, type: 3}
       propertyPath: m_Name
       value: Water
@@ -3516,7 +3571,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7987051013069600600, guid: 289391ae7fa2ebd43b2f3b88f9f30a6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1742028030}
   m_SourcePrefab: {fileID: 100100000, guid: 289391ae7fa2ebd43b2f3b88f9f30a6a, type: 3}
 --- !u!1001 &1846879257111059622
 PrefabInstance:
