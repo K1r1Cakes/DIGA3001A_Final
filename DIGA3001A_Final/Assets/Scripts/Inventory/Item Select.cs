@@ -5,7 +5,6 @@ using TMPro;
 public class ItemSelect : MonoBehaviour, IPointerClickHandler
 {
     public Item items;
-    public GameObject panel;
     public TextMeshProUGUI itemName;
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -20,7 +19,7 @@ public class ItemSelect : MonoBehaviour, IPointerClickHandler
             }
 
             Debug.Log("Item selected");
-                itemName.text = items.itemName;
+            itemName.text = items.itemName;
 
         }
     }
