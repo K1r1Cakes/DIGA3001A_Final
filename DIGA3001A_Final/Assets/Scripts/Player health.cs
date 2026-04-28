@@ -5,6 +5,7 @@ public class Playerhealth : MonoBehaviour
 {
     public Image healthBar;
     public float healthAmount = 100f;
+    public GameObject deathPanel;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,7 +26,8 @@ public class Playerhealth : MonoBehaviour
         if (healthAmount  == 0)
         {
             //Lose condition
-            //PauseController.setPause(true);
+            deathPanel.SetActive(true);
+            PauseController.SetPause(true);
             Debug.Log("Lose");
         }
     }

@@ -10,7 +10,7 @@ public class Playerthirst : MonoBehaviour
     public float globalThirstTimer;
     public float thirstTimer = 2f;
     public Image thirstBar;
-    //public Playerhealth playerhealth;
+    public Playerhealth playerhealth;
     
     public bool isThirsty = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -39,7 +39,7 @@ public class Playerthirst : MonoBehaviour
             else
             {
              Debug.Log("Player is thirsty!");
-            // playerhealth.playerDamage();
+             playerhealth.TakeDamage(10);
             }
             globalThirstTimer = thirstTimer;
         }

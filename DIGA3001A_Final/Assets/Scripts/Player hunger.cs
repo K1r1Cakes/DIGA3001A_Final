@@ -9,6 +9,7 @@ public class Playerhunger : MonoBehaviour
     public float hungerAmount = 100f;
     public float hungerDamage = 10f;
     public Image hungerBar;
+    public Playerhealth playerhealth;
    
     public bool isHungry = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -37,7 +38,7 @@ public class Playerhunger : MonoBehaviour
             else
             {
              Debug.Log("Player starved to death");
-             //playerhealth.playerDamage();
+             playerhealth.TakeDamage(10);
             }
             globalTimer = hungerTimer;
         }
