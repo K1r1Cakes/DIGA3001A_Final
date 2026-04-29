@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6876931308481938139}
   - component: {fileID: 1074504625752896659}
   - component: {fileID: 8948077349712229582}
-  - component: {fileID: 5945990851680083666}
+  - component: {fileID: 4347369166442003619}
   m_Layer: 0
   m_Name: Shelter
   m_TagString: Untagged
@@ -124,7 +124,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -172,7 +172,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5945990851680083666
+--- !u!114 &4347369166442003619
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

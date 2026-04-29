@@ -26,7 +26,7 @@ public class Craftitem : MonoBehaviour
         if (inventoryController.hasItem(itemsList, itemsNeeded))
         {
             Debug.Log("Got shelter");
-            Instantiate(completedItem);
+            completedItem.SetActive(true);
             UpdateUI();
         }
         else

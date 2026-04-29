@@ -4,7 +4,7 @@ using System.Collections;
 
 public class Shelter : MonoBehaviour
 {
-    public TextMeshProUGUI shelterText;
+    public TextMeshProUGUI  shelterText;
     public float delay = 3f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,6 +16,13 @@ public class Shelter : MonoBehaviour
     void Update()
     {
         
+    }
+    void Awake()
+    {
+        if (shelterText == null)
+        {
+            shelterText = FindObjectOfType<TextMeshProUGUI>();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collide)
