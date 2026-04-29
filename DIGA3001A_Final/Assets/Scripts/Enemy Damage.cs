@@ -4,6 +4,7 @@ public class EnemyDamage : MonoBehaviour
 {
     public float totalEnemyHealth = 30f;
     public float enemyDamage = 10f;
+    public GameObject experience;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,23 +22,22 @@ public class EnemyDamage : MonoBehaviour
     {
         if (collision.CompareTag("Bullet"))
         {
-           
-            if (totalEnemyHealth > 0)
-            {
-                Debug.Log("Enemy Damage");
-                totalEnemyHealth -= enemyDamage;
-
+            Debug.Log("Enemy Damage"); 
+           totalEnemyHealth -= enemyDamage;
+ 
                 Bullet bullet = collision.GetComponent<Bullet>();
                 if (bullet != null)
                 {
                     bullet.BulletHit(); 
                 }
-               
-            }
-            else
+
+            if (totalEnemyHealth <= 0)
             {
-                Debug.Log("Enemy dead");
+               Debug.Log("Enemy dead");
+                Instantiate(experience, transform.position, Quaternion.identity);
                 Destroy(this.gameObject);
+               
+               
             }
             
             
