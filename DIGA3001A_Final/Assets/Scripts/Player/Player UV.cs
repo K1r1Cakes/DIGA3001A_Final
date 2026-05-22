@@ -8,12 +8,13 @@ public class PlayerUV : MonoBehaviour
     public float uvGain = 10f;
     public float globalUVTimer;
     public float uvTimer = 5f;
+    public bool isFilling = false;
     public Image uvBar;
     //public Playerhealth playerhealth;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        globalUVTimer = uvTimer;
+        globalUVTimer = uvTimer; //GT = 5
     }
 
     // Update is called once per frame
@@ -30,8 +31,17 @@ public class PlayerUV : MonoBehaviour
         {
             if (uvAmount > 0)
             {
-                loseUV(uvDamage);
-                globalUVTimer = uvTimer;
+                if(isFilling == true)
+                {
+                    fillUV(uvGain);
+                    globalUVTimer = uvTimer; 
+                }
+                else
+                {
+                    loseUV(uvDamage);
+                    globalUVTimer = uvTimer; 
+                }
+               
             }
             else
             {
@@ -41,6 +51,25 @@ public class PlayerUV : MonoBehaviour
 
             globalUVTimer = uvTimer;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collide)
+    {
+        if (collide.CompareTag("Shade"))
+        {
+            isFilling = true;
+            Debug.Log("InShade");
+        }
+       
+    }
+    private void OnTriggerExit2D(Collider2D collide)
+    {
+        if (collide.CompareTag("Shade"))
+        {
+            isFilling = false;
+            Debug.Log("OutInShade");
+        }
+        
     }
 
     public void loseUV(float uv)
