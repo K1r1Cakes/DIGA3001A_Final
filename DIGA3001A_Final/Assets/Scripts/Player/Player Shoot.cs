@@ -5,6 +5,7 @@ public class PlayerShoot : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform shootPoint;
+    public HotBarController hotBarController;
     
     //shoot form
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -21,7 +22,16 @@ public class PlayerShoot : MonoBehaviour
 
    public void OnShoot(InputAction.CallbackContext context)
     {
-        if (!context.started) return;
+        Debug.Log("Input detected");
+
+        if (!context.performed) return;
+        Debug.Log("Performed");
+
+        if (hotBarController.selectedItem == null)
+        {
+            Debug.Log("Gun not selected");
+            return;
+        }
 
          if (PauseController.isGamePaused)
          {
@@ -29,6 +39,7 @@ public class PlayerShoot : MonoBehaviour
          }
         
         Instantiate(bulletPrefab, transform.position, transform.rotation);
+        Debug.Log("Shoot");
        // audioSource.Play();
     }
 }

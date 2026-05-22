@@ -7,6 +7,7 @@ public class HotBarController : MonoBehaviour
     public GameObject hotbarPanel;
     public GameObject slotPrefab;
     public int slotCount = 5;
+    public Item selectedItem;
 
     private ItemDictionary itemDictionary;
     private Key[] hotbarKeys;
@@ -43,6 +44,8 @@ public class HotBarController : MonoBehaviour
         {
             Item item = slot.currentItem.GetComponent<Item>();
             item.UseItem();
+
+            selectedItem = item;
         }
     }
 
