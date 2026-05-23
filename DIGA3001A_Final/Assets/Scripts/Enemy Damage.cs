@@ -5,6 +5,7 @@ public class EnemyDamage : MonoBehaviour
     public float totalEnemyHealth = 30f;
     public float enemyDamage = 10f;
     public GameObject experience;
+    public PlayerSword playerSword;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -42,5 +43,20 @@ public class EnemyDamage : MonoBehaviour
             
             
         }
+
+        if (collision.CompareTag("SwordRange") && playerSword.isSwinging == true)
+        {
+            totalEnemyHealth -= enemyDamage;
+
+             if (totalEnemyHealth <= 0)
+            {
+               Debug.Log("Enemy dead");
+                Instantiate(experience, transform.position, Quaternion.identity);
+                Destroy(this.gameObject);
+               
+               
+            }
+        }
     }
+
 }
