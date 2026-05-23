@@ -8,6 +8,8 @@ TagManager:
   - Medkit
   - Item
   - Bullet
+  - Shade
+  - SwordRange
   layers:
   - Default
   - TransparentFX
