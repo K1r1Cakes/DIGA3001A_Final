@@ -33,6 +33,11 @@ public class PlayerShoot : MonoBehaviour
             return;
         }
 
+        if (hotBarController.selectedItem.itemName != "Gun")
+        {
+            return;
+        }
+
          if (PauseController.isGamePaused)
          {
             return;
