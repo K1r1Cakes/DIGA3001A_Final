@@ -5,6 +5,7 @@ public class PlayerShoot : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform shootPoint;
+    public int bulletAmount = 10;
     public HotBarController hotBarController;
     
     //shoot form
@@ -43,8 +44,18 @@ public class PlayerShoot : MonoBehaviour
             return;
          }
         
-        Instantiate(bulletPrefab, transform.position, transform.rotation);
-        Debug.Log("Shoot");
+        
+        if (bulletAmount < 0)
+        {
+            bulletAmount = 0;
+            return;
+        }
+        
+            Instantiate(bulletPrefab, transform.position, transform.rotation);
+            bulletAmount -= 1;
+            Debug.Log("Shoot"); 
+        
+        
        // audioSource.Play();
     }
 }
