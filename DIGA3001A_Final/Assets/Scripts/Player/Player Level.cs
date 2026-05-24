@@ -6,7 +6,7 @@ public class PlayerLevel : MonoBehaviour
 {
     public int Level = 0;
     public float levelAmount = 0f;
-    public float experienceAmount = 100f;
+    public float experienceAmount = 100f; //Change
     public Image LevelBar;
     public TextMeshProUGUI levelText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
