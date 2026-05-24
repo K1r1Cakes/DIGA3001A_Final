@@ -8,6 +8,7 @@ public class PlayerSword : MonoBehaviour
     public GameObject swordRange;
     public bool isSwinging = false; 
     public float swingTime = 0.2f;
+    public Stick stick;
     public HotBarController hotBarController;
     
     public void OnSwing(InputAction.CallbackContext context)
@@ -25,6 +26,11 @@ public class PlayerSword : MonoBehaviour
         }
 
         if (hotBarController.selectedItem.itemName != "Stick")
+        {
+            return;
+        }
+
+        if (stick.stickLifeSpan == 0)
         {
             return;
         }
@@ -48,6 +54,7 @@ public class PlayerSword : MonoBehaviour
         swordRange.SetActive(true);
 
         yield return new WaitForSeconds(swingTime);
+        stick.stickLifeSpan -= 1;
 
         swordRange.SetActive(false);
 
