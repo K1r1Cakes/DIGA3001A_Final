@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class PlayerShoot : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform shootPoint;
     public int bulletAmount = 10;
+    public TextMeshProUGUI bulletAmountText;
     public HotBarController hotBarController;
     
     //shoot form
@@ -18,7 +20,7 @@ public class PlayerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        bulletAmountText.text = bulletAmount.ToString();
     }
 
    public void OnShoot(InputAction.CallbackContext context)
@@ -45,7 +47,7 @@ public class PlayerShoot : MonoBehaviour
          }
         
         
-        if (bulletAmount < 0)
+        if (bulletAmount <= 0)
         {
             bulletAmount = 0;
             return;
