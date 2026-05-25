@@ -8,7 +8,6 @@ public class ItemCollection : MonoBehaviour
     private GameObject itemPrefab;
     private InventoryController inventoryController;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         inventoryController = FindObjectOfType<InventoryController>();
