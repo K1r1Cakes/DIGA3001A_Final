@@ -34,12 +34,14 @@ public class UseItem : MonoBehaviour
         {
             Debug.Log("Eat food");
             hunger.fillHunger(10);
+            inventory.RemoveItem("Food");
         }
 
         if (currentItem.itemName == "Health")
         {
             Debug.Log("Heal up");
             health.fillHealth(10);
+            inventory.RemoveItem("Health");
         }
     }
 }
