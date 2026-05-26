@@ -4,7 +4,6 @@ using TMPro;
 
 public class PlayerLevel : MonoBehaviour
 {
-    public int Level = 0;
     public float levelAmount = 0f;
     public float experienceAmount = 100f; //Change
     public Image LevelBar;
@@ -19,7 +18,7 @@ public class PlayerLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        levelText.text = Level.ToString();
+        levelText.text = levelAmount.ToString();
     }
 
     private void OnTriggerEnter2D(Collider2D collide)
@@ -41,7 +40,7 @@ public class PlayerLevel : MonoBehaviour
 
         if (levelAmount >= 100)
         {
-            Level++;
+            levelAmount = 100;
         }
     }
 
@@ -49,6 +48,5 @@ public class PlayerLevel : MonoBehaviour
     {
         levelAmount -= experience;
         LevelBar.fillAmount = levelAmount/100f;
-        Level--;
     }
 }
