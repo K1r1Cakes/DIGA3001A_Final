@@ -45,8 +45,15 @@ public class HotBarController : MonoBehaviour
         if (slot.currentItem != null)
         {
             Item item = slot.currentItem.GetComponent<Item>();
-            item.UseItem();
             selectedItem = item;
+            selectedItem.parentSlot = slot;
+
+            item.UseItem();
+           
+            if (slot.currentItem == null || slot.currentItem.Equals(null))
+            {
+                slot.currentItem = null;
+            }
         }
     }
 

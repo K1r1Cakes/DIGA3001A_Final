@@ -8,7 +8,7 @@ public class PlayerSword : MonoBehaviour
     public GameObject swordRange;
     public bool isSwinging = false; 
     public float swingTime = 0.2f;
-    public Stick stick;
+    //public Stick stick;
     public HotBarController hotBarController;
     public InventoryController inventory;
     
@@ -31,11 +31,12 @@ public class PlayerSword : MonoBehaviour
             return;
         }
 
-        if (stick.stickLifeSpan <= 0)
-        {
-            //inventory.RemoveItem(hotBarController.selectedItemObject);
-            return;
-        }
+        // if (stick.stickLifeSpan <= 0)
+        // {
+        //     //inventory.RemoveItem(hotBarController.selectedItemObject);
+        //     inventory.RemoveItemFromSlot(hotBarController.selectedItem.parentSlot);
+        //     return;
+        // }
 
         if (context.performed)
         {
@@ -56,8 +57,16 @@ public class PlayerSword : MonoBehaviour
         swordRange.SetActive(true);
 
         yield return new WaitForSeconds(swingTime);
-        stick.stickLifeSpan -= 1;
 
+        Stick currentStick = hotBarController.selectedItem.GetComponent<Stick>();
+
+        currentStick.stickLifeSpan -= 1;
+
+        if (currentStick.stickLifeSpan <= 0)
+        {
+            inventory.RemoveItemFromSlot(hotBarController.selectedItem.parentSlot);
+        }
+        
         swordRange.SetActive(false);
 
         isSwinging = false;
