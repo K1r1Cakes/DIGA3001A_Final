@@ -15,7 +15,6 @@ public class Trade : MonoBehaviour
         else
         {
             inventory.AddItem(shopItem.itemPrefab);
-            //playerLevel.levelAmount -= shopItem.itemCost;
             playerLevel.loseLevel(shopItem.itemCost);
         }
 
