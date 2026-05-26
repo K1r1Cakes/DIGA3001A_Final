@@ -8,6 +8,19 @@ public class ItemSelect : MonoBehaviour, IPointerClickHandler
     public TextMeshProUGUI itemName;
     public bool isItemSelected = false;
     public UseItem useItem;
+
+    public void Awake()
+    {
+        // if (itemName == null)
+        // {
+        //     itemName = GameObject.Find("Item Name").GetComponent<TextMeshProUGUI>();
+        // }
+
+        if (useItem == null)
+        {
+            useItem = FindObjectOfType<UseItem>();
+        }
+    }
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Left)
@@ -21,9 +34,18 @@ public class ItemSelect : MonoBehaviour, IPointerClickHandler
                 if (itemData != null)
                 {
                     items = itemData;
-                    itemName.text = items.itemName;
 
-                    useItem.currentItem = items;
+                    if (itemName != null)
+                    {
+                        itemName.text = items.itemName;
+                        Debug.Log("Label changed to: " + itemName.text);
+                    }
+                    
+                    if (useItem != null)
+                    {
+                         useItem.currentItem = items;
+                    }
+                   
 
                      Debug.Log("Item selected");
                      isItemSelected = true;
@@ -35,16 +57,6 @@ public class ItemSelect : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class InventoryController : MonoBehaviour
@@ -7,6 +8,7 @@ public class InventoryController : MonoBehaviour
     public GameObject inventoryPanel;
     public GameObject slotPrefab;
     public int slotCount;
+    public TextMeshProUGUI itemNameLabel;
 
     public GameObject[] itemPrefabs;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -84,6 +86,11 @@ public class InventoryController : MonoBehaviour
                 GameObject newItem = Instantiate(itemPrefab, slot.transform);
                 newItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
                 slot.currentItem = newItem;
+                ItemSelect itemSelect = newItem.GetComponent<ItemSelect>();
+                if (itemSelect != null)
+                {
+                    itemSelect.itemName = itemNameLabel;
+                }
                 Debug.Log("Item added");
                 return true;
             }
