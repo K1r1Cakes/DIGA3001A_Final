@@ -145,6 +145,15 @@ public partial class @PlayerControl: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Trade"",
+                    ""type"": ""Button"",
+                    ""id"": ""1927ee1e-1597-4dd4-8307-bdfa24958f57"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -312,6 +321,17 @@ public partial class @PlayerControl: IInputActionCollection2, IDisposable
                     ""action"": ""Swing"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a3c99e43-856e-4283-86da-83bc7f332458"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Trade"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -326,6 +346,7 @@ public partial class @PlayerControl: IInputActionCollection2, IDisposable
         m_Movement_Inventory = m_Movement.FindAction("Inventory", throwIfNotFound: true);
         m_Movement_Craft = m_Movement.FindAction("Craft", throwIfNotFound: true);
         m_Movement_Swing = m_Movement.FindAction("Swing", throwIfNotFound: true);
+        m_Movement_Trade = m_Movement.FindAction("Trade", throwIfNotFound: true);
     }
 
     ~@PlayerControl()
@@ -412,6 +433,7 @@ public partial class @PlayerControl: IInputActionCollection2, IDisposable
     private readonly InputAction m_Movement_Inventory;
     private readonly InputAction m_Movement_Craft;
     private readonly InputAction m_Movement_Swing;
+    private readonly InputAction m_Movement_Trade;
     /// <summary>
     /// Provides access to input actions defined in input action map "Movement".
     /// </summary>
@@ -447,6 +469,10 @@ public partial class @PlayerControl: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Movement/Swing".
         /// </summary>
         public InputAction @Swing => m_Wrapper.m_Movement_Swing;
+        /// <summary>
+        /// Provides access to the underlying input action "Movement/Trade".
+        /// </summary>
+        public InputAction @Trade => m_Wrapper.m_Movement_Trade;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -491,6 +517,9 @@ public partial class @PlayerControl: IInputActionCollection2, IDisposable
             @Swing.started += instance.OnSwing;
             @Swing.performed += instance.OnSwing;
             @Swing.canceled += instance.OnSwing;
+            @Trade.started += instance.OnTrade;
+            @Trade.performed += instance.OnTrade;
+            @Trade.canceled += instance.OnTrade;
         }
 
         /// <summary>
@@ -520,6 +549,9 @@ public partial class @PlayerControl: IInputActionCollection2, IDisposable
             @Swing.started -= instance.OnSwing;
             @Swing.performed -= instance.OnSwing;
             @Swing.canceled -= instance.OnSwing;
+            @Trade.started -= instance.OnTrade;
+            @Trade.performed -= instance.OnTrade;
+            @Trade.canceled -= instance.OnTrade;
         }
 
         /// <summary>
@@ -602,5 +634,12 @@ public partial class @PlayerControl: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSwing(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Trade" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnTrade(InputAction.CallbackContext context);
     }
 }

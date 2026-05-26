@@ -2507,12 +2507,11 @@ GameObject:
   m_Component:
   - component: {fileID: 643979246}
   - component: {fileID: 643979247}
-  - component: {fileID: 643979248}
   - component: {fileID: 643979249}
   - component: {fileID: 643979250}
   m_Layer: 0
   m_Name: Trade Hole
-  m_TagString: Untagged
+  m_TagString: Trade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2591,19 +2590,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &643979248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 643979245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8704930e340e9eb49bc5e7e496983e35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ActivateTradeMenu
-  tradePanel: {fileID: 42474713}
 --- !u!58 &643979249
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4663,6 +4649,7 @@ GameObject:
   - component: {fileID: 1288354266}
   - component: {fileID: 1288354267}
   - component: {fileID: 1288354268}
+  - component: {fileID: 1288354269}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4855,6 +4842,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 651276b0-00c2-47b2-9d2a-56c2474f5154
     m_ActionName: 'Movement/Swing[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1288354269}
+        m_TargetAssemblyTypeName: ActivateTradeMenu, Assembly-CSharp
+        m_MethodName: onTradeMenu
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1927ee1e-1597-4dd4-8307-bdfa24958f57
+    m_ActionName: 'Movement/Trade[/Keyboard/i]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Movement
@@ -5073,6 +5076,20 @@ MonoBehaviour:
   experienceAmount: 100
   LevelBar: {fileID: 469500404}
   levelText: {fileID: 172483409}
+--- !u!114 &1288354269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288354253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8704930e340e9eb49bc5e7e496983e35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ActivateTradeMenu
+  tradePanel: {fileID: 226146943}
+  inRange: 0
 --- !u!1 &1363841031
 GameObject:
   m_ObjectHideFlags: 0
@@ -7875,7 +7892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4393454901865770966, guid: 5aa3ab70845c8184096815452fc81377, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8828134252623381840, guid: 5aa3ab70845c8184096815452fc81377, type: 3}
       propertyPath: m_IsTrigger

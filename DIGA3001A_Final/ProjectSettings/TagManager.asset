@@ -11,6 +11,7 @@ TagManager:
   - Shade
   - SwordRange
   - Experience
+  - Trade
   layers:
   - Default
   - TransparentFX
