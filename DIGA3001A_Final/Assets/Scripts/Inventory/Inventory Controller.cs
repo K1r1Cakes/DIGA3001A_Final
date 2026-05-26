@@ -86,6 +86,8 @@ public class InventoryController : MonoBehaviour
                 GameObject newItem = Instantiate(itemPrefab, slot.transform);
                 newItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
                 slot.currentItem = newItem;
+                Item item = newItem.GetComponent<Item>();
+                item.parentSlot = slot;
                 ItemSelect itemSelect = newItem.GetComponent<ItemSelect>();
                 if (itemSelect != null)
                 {
@@ -98,31 +100,66 @@ public class InventoryController : MonoBehaviour
         return false;
     }
 
-    public bool RemoveItem(string itemName)
-    {
-        foreach (Transform slotTransform in inventoryPanel.transform)
-        {
-            Slot slot = slotTransform.GetComponent<Slot>();
+    // public bool RemoveItem(string itemName)
+    // {
+    //     foreach (Transform slotTransform in inventoryPanel.transform)
+    //     {
+    //         Slot slot = slotTransform.GetComponent<Slot>();
 
-            if (slot == null || slot.currentItem == null) continue;
+    //         if (slot == null || slot.currentItem == null) continue;
             
-                //Compare prefab names
-                Item item = slot.currentItem.GetComponent<Item>();
+    //             //Compare prefab names
+    //             Item item = slot.currentItem.GetComponent<Item>();
 
-                if (item != null && item.itemName == itemName)
-                {
-                    GameObject itemToRemove = slot.currentItem;
-                    slot.currentItem = null;
-                    Destroy(itemToRemove);
+    //             if (item != null && item.itemName == itemName)
+    //             {
+    //                 GameObject itemToRemove = slot.currentItem;
+    //                 slot.currentItem = null;
+    //                 Destroy(itemToRemove);
                     
 
-                    Debug.Log("Item used");
-                    return true;
-                }
+    //                 Debug.Log("Item used");
+    //                 return true;
+    //             }
             
-        }
-        return false;
+    //     }
+    //     return false;
+    // }
+
+//    public bool RemoveItem(GameObject itemObject)
+// {
+//     foreach (Transform slotTransform in inventoryPanel.transform)
+//     {
+//         Slot slot = slotTransform.GetComponent<Slot>();
+
+//         if (slot != null && slot.currentItem == itemObject)
+//         {
+//             slot.currentItem = null;
+
+//             Destroy(itemObject);
+
+//             Debug.Log("Item removed");
+//             return true;
+//         }
+//     }
+
+//     return false;
+// } 
+
+public bool RemoveItemFromSlot(Slot targetSlot)
+{
+    if (targetSlot != null && targetSlot.currentItem != null)
+    {
+        Destroy(targetSlot.currentItem);
+        targetSlot.currentItem = null;
+
+        Debug.Log("Item removed");
+        return true;
     }
+
+    return false;
+}
+
 
 public int GetItemCount(Item itemToCheck)
 {

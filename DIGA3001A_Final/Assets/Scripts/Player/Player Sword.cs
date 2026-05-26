@@ -10,6 +10,7 @@ public class PlayerSword : MonoBehaviour
     public float swingTime = 0.2f;
     public Stick stick;
     public HotBarController hotBarController;
+    public InventoryController inventory;
     
     public void OnSwing(InputAction.CallbackContext context)
     {
@@ -30,8 +31,9 @@ public class PlayerSword : MonoBehaviour
             return;
         }
 
-        if (stick.stickLifeSpan == 0)
+        if (stick.stickLifeSpan <= 0)
         {
+            //inventory.RemoveItem(hotBarController.selectedItemObject);
             return;
         }
 
