@@ -2820,11 +2820,6 @@ Transform:
   - {fileID: 361855172}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &387484267 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 215755011127950035, guid: 5aa3ab70845c8184096815452fc81377, type: 3}
-  m_PrefabInstance: {fileID: 1846879257111059622}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &409088608
 GameObject:
   m_ObjectHideFlags: 0
@@ -11301,10 +11296,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1288354259}
-    - target: {fileID: 680207408183664343, guid: 5aa3ab70845c8184096815452fc81377, type: 3}
-      propertyPath: raycastOrigin
-      value: 
-      objectReference: {fileID: 387484267}
     - target: {fileID: 680207408183664343, guid: 5aa3ab70845c8184096815452fc81377, type: 3}
       propertyPath: 'patrolPoints.Array.data[0]'
       value: 
