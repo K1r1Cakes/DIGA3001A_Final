@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2679146164457720611, guid: 9b66189286cb1804fad628c8f3acd4ba, type: 3}
       propertyPath: itemID
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2679146164457720611, guid: 9b66189286cb1804fad628c8f3acd4ba, type: 3}
       propertyPath: itemName
-      value: Water
+      value: Health
       objectReference: {fileID: 0}
     - target: {fileID: 3099018982513038206, guid: 9b66189286cb1804fad628c8f3acd4ba, type: 3}
       propertyPath: m_Name
@@ -86,11 +86,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6636009612426359791, guid: 9b66189286cb1804fad628c8f3acd4ba, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -6.83
+      value: -14.65
       objectReference: {fileID: 0}
     - target: {fileID: 6636009612426359791, guid: 9b66189286cb1804fad628c8f3acd4ba, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 3.72
+      value: 2.85
       objectReference: {fileID: 0}
     - target: {fileID: 6636009612426359791, guid: 9b66189286cb1804fad628c8f3acd4ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -155,6 +155,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemSelect
   items: {fileID: 7585840053160821328}
   itemName: {fileID: 0}
+  itemStatus: {fileID: 0}
+  isItemSelected: 0
+  useItem: {fileID: 0}
 --- !u!114 &7585840053160821328 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2679146164457720611, guid: 9b66189286cb1804fad628c8f3acd4ba, type: 3}

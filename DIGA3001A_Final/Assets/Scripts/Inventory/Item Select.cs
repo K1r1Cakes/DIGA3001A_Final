@@ -50,7 +50,6 @@ public class ItemSelect : MonoBehaviour, IPointerClickHandler
 
                      Debug.Log("Item selected");
                      isItemSelected = true;
-                     itemStatus.text = "";
                 }
             }
 

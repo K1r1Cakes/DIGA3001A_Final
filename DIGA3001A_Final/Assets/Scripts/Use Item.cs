@@ -52,11 +52,11 @@ public class UseItem : MonoBehaviour
             isHotBar = false;
         }
 
-        if (currentItem.itemName == "Bullet")
+        if (currentItem.itemName == "Coconut")
         {
             Debug.Log("Bullets added");
             shoot.bulletAmount += 5;
-            itemStatusText.text = "Bullets added";
+            itemStatusText.text = "Coconut added";
             isHotBar = false;
         }
 

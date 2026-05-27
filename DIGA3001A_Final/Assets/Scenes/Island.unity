@@ -8489,7 +8489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShopItem
   itemName: Health
   itemCost: 10
-  itemPrefab: {fileID: 5199385063340689713, guid: 2285e560214b6d94483642328e4ddea0, type: 3}
+  itemPrefab: {fileID: 7451629117569456653, guid: 40013715c8ea3fe44bf6624d8abad674, type: 3}
 --- !u!114 &1544030286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8630,14 +8630,6 @@ PrefabInstance:
       objectReference: {fileID: 885478743}
     - target: {fileID: 7451629117569456653, guid: 40013715c8ea3fe44bf6624d8abad674, type: 3}
       propertyPath: m_Name
-      value: Health
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585840053160821328, guid: 40013715c8ea3fe44bf6624d8abad674, type: 3}
-      propertyPath: itemID
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585840053160821328, guid: 40013715c8ea3fe44bf6624d8abad674, type: 3}
-      propertyPath: itemName
       value: Health
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -10043,7 +10035,7 @@ MonoBehaviour:
   hunger: {fileID: 1758853465}
   health: {fileID: 1288354260}
   inventory: {fileID: 1758853466}
-  shoot: {fileID: 0}
+  shoot: {fileID: 1288354261}
   currentItem: {fileID: 0}
   itemStatusText: {fileID: 885478743}
 --- !u!114 &1758853470
@@ -11143,7 +11135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShopItem
   itemName: Food
   itemCost: 10
-  itemPrefab: {fileID: 8405888262229189160, guid: fdbbaa1168d973a49bbb923ed920ef87, type: 3}
+  itemPrefab: {fileID: 2920887495875229284, guid: 84a5b770d0cd74b4891db8b9f9175b78, type: 3}
 --- !u!114 &2117723521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11254,7 +11246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShopItem
   itemName: Bullet
   itemCost: 10
-  itemPrefab: {fileID: 1644480874648526376, guid: 4f1a3406e66218e4cb935e1ba1fb82cd, type: 3}
+  itemPrefab: {fileID: 5950627188604624988, guid: 40db0ea6f83324345beecc4b1eb728d5, type: 3}
 --- !u!114 &2135912125
 MonoBehaviour:
   m_ObjectHideFlags: 0

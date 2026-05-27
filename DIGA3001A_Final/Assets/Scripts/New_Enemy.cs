@@ -90,7 +90,7 @@ public class New_Enemy : MonoBehaviour
     private void FollowPlayer()
     {
         agent.SetDestination(target.position);
-        Debug.Log("Follwing");
+       // Debug.Log("Follwing");
     }
     private void Patrol()
     {
@@ -101,7 +101,7 @@ public class New_Enemy : MonoBehaviour
             StartCoroutine(waitAtPatrolPoint());
         }
 
-        Debug.Log("Patrollimg");
+       // Debug.Log("Patrollimg");
     }
     private IEnumerator waitAtPatrolPoint()
     {

@@ -84,6 +84,8 @@ public class InventoryController : MonoBehaviour
             if (slot != null && slot.currentItem == null)
             {
                 GameObject newItem = Instantiate(itemPrefab, slot.transform);
+                Debug.Log(newItem.name);
+                Debug.Log(newItem.GetComponent<RectTransform>());
                 newItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
                 slot.currentItem = newItem;
                 Item item = newItem.GetComponent<Item>();
