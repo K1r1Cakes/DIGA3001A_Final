@@ -6,6 +6,7 @@ public class ItemSelect : MonoBehaviour, IPointerClickHandler
 {   
     public Item items;
     public TextMeshProUGUI itemName;
+    public TextMeshProUGUI itemStatus;
     public bool isItemSelected = false;
     public UseItem useItem;
 
@@ -49,6 +50,7 @@ public class ItemSelect : MonoBehaviour, IPointerClickHandler
 
                      Debug.Log("Item selected");
                      isItemSelected = true;
+                     itemStatus.text = "";
                 }
             }
 
