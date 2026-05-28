@@ -641,6 +641,33 @@ MonoBehaviour:
   shopItem: {fileID: 42474717}
   inventory: {fileID: 1758853466}
   playerLevel: {fileID: 1288354268}
+--- !u!1 &55977336 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4393454901865770966, guid: 5aa3ab70845c8184096815452fc81377, type: 3}
+  m_PrefabInstance: {fileID: 1846879257111059622}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &55977344
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55977336}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c14ab384f897370479eb575dc0967b2b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &95005192
 GameObject:
   m_ObjectHideFlags: 0
@@ -2015,7 +2042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ac871955d31d34fa4db9312eecfda8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldTime
-  dayLength: 15
+  dayLength: 60
 --- !u!4 &293078364
 Transform:
   m_ObjectHideFlags: 0
@@ -3220,7 +3247,7 @@ Transform:
   m_GameObject: {fileID: 594653308}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.848, y: 0.047, z: 0}
+  m_LocalPosition: {x: 1.15, y: 0.047, z: 0}
   m_LocalScale: {x: 0.8694, y: 0.2722, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3885,8 +3912,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1448737737
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
@@ -78662,7 +78689,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1707472681
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5497369311495656864, guid: 0e74214778cf135458dbdaab22828ea7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -80192,8 +80219,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1033926555
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
@@ -81878,8 +81905,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1448737737
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
@@ -82839,8 +82866,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1033926555
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 417470712464359739, guid: eaff35244aa4f7743ada2b15a0f2dd6a, type: 3}
@@ -83155,10 +83182,21 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 7979084967657331261, guid: f33a5f66e76da0d4c9308bffd35807bb, type: 3}
+    - target: {fileID: 5521086223757674033, guid: 5aa3ab70845c8184096815452fc81377, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521086223757674033, guid: 5aa3ab70845c8184096815452fc81377, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1707472681
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4393454901865770966, guid: 5aa3ab70845c8184096815452fc81377, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 55977344}
   m_SourcePrefab: {fileID: 100100000, guid: 5aa3ab70845c8184096815452fc81377, type: 3}
 --- !u!1001 &8093273915224738630
 PrefabInstance:
@@ -83170,11 +83208,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2546778615414174961, guid: 1e306d49813cb7046bf4d8d40ed50693, type: 3}
       propertyPath: m_SortingLayer
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2546778615414174961, guid: 1e306d49813cb7046bf4d8d40ed50693, type: 3}
       propertyPath: m_SortingLayerID
-      value: 1707472681
+      value: 1033926555
       objectReference: {fileID: 0}
     - target: {fileID: 5316133099999764316, guid: 1e306d49813cb7046bf4d8d40ed50693, type: 3}
       propertyPath: m_Name

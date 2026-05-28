@@ -16,6 +16,7 @@ public class New_Enemy : MonoBehaviour
    public Transform[] patrolPoints;
    public Transform raycastOrigin;
    private NavMeshAgent agent;
+   private Animator animator;
    private float patrolWaitTime = 2f;
    private float stopAtDistance = 1f;
    private float detectionRange = 10f;
@@ -38,7 +39,7 @@ public class New_Enemy : MonoBehaviour
     }
     void Start()
     {
-       
+        animator = GetComponent<Animator>();
         GoToNextPatrolPoint();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -90,6 +91,9 @@ public class New_Enemy : MonoBehaviour
     private void FollowPlayer()
     {
         agent.SetDestination(target.position);
+        animator.SetBool("isWalking", true);
+        animator.SetFloat("InputX", agent.velocity.x);
+        animator.SetFloat("InputY", agent.velocity.y);
        // Debug.Log("Follwing");
     }
     private void Patrol()
@@ -107,11 +111,18 @@ public class New_Enemy : MonoBehaviour
     {
         isWaiting = true;
         agent.isStopped = true;
-
+        animator.SetBool("isWalking", false);
+        animator.SetFloat("InputX", agent.velocity.x);
+        animator.SetFloat("InputY", agent.velocity.y);
 
         yield return new WaitForSeconds(patrolWaitTime);
+        
 
         agent.isStopped = false;
+        animator.SetBool("isWalking", true);
+        animator.SetFloat("InputX", agent.velocity.x);
+        animator.SetFloat("InputY", agent.velocity.y);
+        
         GoToNextPatrolPoint();
         isWaiting = false;
     }

@@ -5,18 +5,22 @@ public class Bullet : MonoBehaviour
    public float bulletSpeed = 8f;
 
 
-    // Update is called once per frame
+    void Start()
+    {
+        Destroy(gameObject, 3f);
+    }
     void Update()
     {
         transform.Translate(transform.right * bulletSpeed * Time.deltaTime);
-        if (transform.position.x > 8f)
-        {
-            Destroy(this.gameObject);
-        }
     }
 
     public void BulletHit()
     {
         Destroy(this.gameObject);
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+{
+    Debug.Log("Bullet hit" +other.name);
+}
 }
