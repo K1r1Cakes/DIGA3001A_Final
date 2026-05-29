@@ -11,6 +11,7 @@ public class WorldTime : MonoBehaviour
 
     private void Start()
     {
+        currentTime = new TimeSpan(6, 0 , 0);
         StartCoroutine(AddMinute());
     }
     private IEnumerator AddMinute()
