@@ -13,7 +13,7 @@ public class SaveController : MonoBehaviour
         saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
         inventoryController = FindAnyObjectByType<InventoryController>();
         hotBarController = FindAnyObjectByType<HotBarController>();
-        LoadGame();
+        //LoadGame();
     }
 
    public void SaveGame()

@@ -16,9 +16,16 @@ public class WorldTime : MonoBehaviour
     }
     private IEnumerator AddMinute()
     {
-        currentTime += TimeSpan.FromMinutes(1);
-        WorldTimeChanged?.Invoke(this, currentTime);
-        yield return new WaitForSeconds(minuteLength);
-        StartCoroutine(AddMinute());
+        while (true)
+        {
+            if (!PauseController.isGamePaused)
+        {
+            currentTime += TimeSpan.FromMinutes(1);
+            WorldTimeChanged?.Invoke(this, currentTime);
+        }
+            yield return new WaitForSeconds(minuteLength);
+        }
+        
+        
     }
 }
