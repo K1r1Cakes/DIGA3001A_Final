@@ -105,28 +105,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7288817772038698450, guid: 9b66189286cb1804fad628c8f3acd4ba, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3826845409251182802, guid: a2db321855ffa154982c69839f65807e, type: 3}
+    - target: {fileID: 7288817772038698450, guid: 9b66189286cb1804fad628c8f3acd4ba, type: 3}
       propertyPath: m_Color.b
-      value: 0.37810606
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7288817772038698450, guid: 9b66189286cb1804fad628c8f3acd4ba, type: 3}
       propertyPath: m_Color.g
-      value: 0.5011229
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7288817772038698450, guid: 9b66189286cb1804fad628c8f3acd4ba, type: 3}
       propertyPath: m_Color.r
-      value: 0.8113208
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8563311256584516681, guid: 9b66189286cb1804fad628c8f3acd4ba, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 7482667652216324306, guid: ba7e1fe61f2b6ed41875646fbf290203, type: 3}
+      objectReference: {fileID: -3826845409251182802, guid: a2db321855ffa154982c69839f65807e, type: 3}
     - target: {fileID: 8563311256584516681, guid: 9b66189286cb1804fad628c8f3acd4ba, type: 3}
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8563311256584516681, guid: 9b66189286cb1804fad628c8f3acd4ba, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563311256584516681, guid: 9b66189286cb1804fad628c8f3acd4ba, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563311256584516681, guid: 9b66189286cb1804fad628c8f3acd4ba, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

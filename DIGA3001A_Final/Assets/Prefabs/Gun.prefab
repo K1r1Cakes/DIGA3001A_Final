@@ -88,7 +88,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.125, y: 1.625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -123,6 +123,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 5316133099999764316}
   itemID: 0
   itemName: Gun
+  parentSlot: {fileID: 0}
 --- !u!114 &7689902171077497878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemSelect
   items: {fileID: 7621571824963426600}
   itemName: {fileID: 0}
+  itemStatus: {fileID: 0}
   isItemSelected: 0
   useItem: {fileID: 0}
 --- !u!212 &2546778615414174961
@@ -200,8 +202,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: ba7e1fe61f2b6ed41875646fbf290203, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -5387384821721986180, guid: e2e658104debb0745b1de8a13cec2c42, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

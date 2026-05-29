@@ -64,14 +64,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.27942324, g: 0.57225966, b: 0.8867924, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7482667652216324306, guid: ba7e1fe61f2b6ed41875646fbf290203, type: 3}
+  m_Sprite: {fileID: 6049605792901559095, guid: e67f26e86f0f56d41acc6841d1d7e246, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -130,8 +130,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: ba7e1fe61f2b6ed41875646fbf290203, type: 3}
-  m_Color: {r: 0.2784314, g: 0.57254905, b: 0.8862745, a: 1}
+  m_Sprite: {fileID: 6049605792901559095, guid: e67f26e86f0f56d41acc6841d1d7e246, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -178,7 +178,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1, y: 1.375}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -212,6 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemSelect
   items: {fileID: 5964906661041654021}
   itemName: {fileID: 0}
+  itemStatus: {fileID: 0}
   isItemSelected: 0
   useItem: {fileID: 0}
 --- !u!114 &5964906661041654021
@@ -229,6 +230,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 56438547118931193}
   itemID: 0
   itemName: Water
+  parentSlot: {fileID: 0}
 --- !u!225 &5741449160251001619
 CanvasGroup:
   m_ObjectHideFlags: 0

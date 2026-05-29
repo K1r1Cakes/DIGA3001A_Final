@@ -77618,14 +77618,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7482667652216324306, guid: ba7e1fe61f2b6ed41875646fbf290203, type: 3}
+  m_Sprite: {fileID: -5387384821721986180, guid: e2e658104debb0745b1de8a13cec2c42, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -84184,12 +84184,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2546778615414174961, guid: 1e306d49813cb7046bf4d8d40ed50693, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2546778615414174961, guid: 1e306d49813cb7046bf4d8d40ed50693, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2546778615414174961, guid: 1e306d49813cb7046bf4d8d40ed50693, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2546778615414174961, guid: 1e306d49813cb7046bf4d8d40ed50693, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2546778615414174961, guid: 1e306d49813cb7046bf4d8d40ed50693, type: 3}
       propertyPath: m_SortingLayerID
-      value: 1033926555
+      value: 1448737737
       objectReference: {fileID: 0}
     - target: {fileID: 5316133099999764316, guid: 1e306d49813cb7046bf4d8d40ed50693, type: 3}
       propertyPath: m_Name
@@ -84240,6 +84252,14 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7786363964121175774, guid: 1e306d49813cb7046bf4d8d40ed50693, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786363964121175774, guid: 1e306d49813cb7046bf4d8d40ed50693, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786363964121175774, guid: 1e306d49813cb7046bf4d8d40ed50693, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -84269,11 +84289,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7786363964121175774, guid: 1e306d49813cb7046bf4d8d40ed50693, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -18.219341
+      value: -17.93
       objectReference: {fileID: 0}
     - target: {fileID: 7786363964121175774, guid: 1e306d49813cb7046bf4d8d40ed50693, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.176677
+      value: 0.88
       objectReference: {fileID: 0}
     - target: {fileID: 7786363964121175774, guid: 1e306d49813cb7046bf4d8d40ed50693, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

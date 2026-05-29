@@ -66,14 +66,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.42745098, g: 0.23921569, b: 0.23921569, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7482667652216324306, guid: ba7e1fe61f2b6ed41875646fbf290203, type: 3}
+  m_Sprite: {fileID: -7907951331658488048, guid: 11eb50345e97ae14088412b1ee541ab6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -121,7 +121,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.625, y: 1.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -205,8 +205,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: ba7e1fe61f2b6ed41875646fbf290203, type: 3}
-  m_Color: {r: 0.4264151, g: 0.23734422, b: 0.23734422, a: 1}
+  m_Sprite: {fileID: -7907951331658488048, guid: 11eb50345e97ae14088412b1ee541ab6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -229,6 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemSelect
   items: {fileID: 7358509958509466879}
   itemName: {fileID: 0}
+  itemStatus: {fileID: 0}
   isItemSelected: 0
   useItem: {fileID: 0}
 --- !u!114 &433685866078811117
@@ -258,6 +259,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 157086705883647571}
   itemID: 6
   itemName: Stick
+  parentSlot: {fileID: 0}
 --- !u!225 &6544089442692714834
 CanvasGroup:
   m_ObjectHideFlags: 0
