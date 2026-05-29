@@ -25,8 +25,14 @@ public class FoodSpawn : MonoBehaviour
         if(foodTimer > timeBetweenFoodSpawns)
         {
             foodTimer =0;
-            int randNum = Random.Range(0, foodSpawnPoints.Length);
-            Instantiate(cherry, foodSpawnPoints[randNum].transform.position, Quaternion.identity);
+            
+            foreach(GameObject spawnPoint in foodSpawnPoints)
+            {
+                if(Random.value < 0.5)
+                {
+                    Instantiate(cherry, spawnPoint.transform.position, Quaternion.identity);
+                }
+            }
         }
     }
 }
