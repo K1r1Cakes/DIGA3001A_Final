@@ -28,7 +28,7 @@ public class FoodSpawn : MonoBehaviour
             
             foreach(GameObject spawnPoint in foodSpawnPoints)
             {
-                if(Random.value < 0.5)
+                if(Random.value < 0.5f)
                 {
                     Instantiate(cherry, spawnPoint.transform.position, Quaternion.identity);
                 }
