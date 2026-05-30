@@ -1,10 +1,12 @@
-using NUnit.Framework;
+using TMPro;
 using UnityEngine;
 
 public class RadioMaker : MonoBehaviour
 {
     public GameObject forestTrigger;
     public GameObject desertTrigger;
+    public GameObject[] alters;
+    public GameObject[] rocks;
     public bool isMicro =false;
     public bool isControl = false;
     public bool isAntenna = false;
@@ -33,7 +35,6 @@ public class RadioMaker : MonoBehaviour
 
     public void unlockForest()
     {
-        
         forestTrigger.SetActive(false);
         Debug.Log("Forest Unlocked");
         
@@ -46,11 +47,16 @@ public class RadioMaker : MonoBehaviour
 
     public void unlockMicro()
     {
-        if (playerLevel.levelAmount == 200)
+        if (playerLevel.levelAmount == 100)
         {
             //Unlock mircro
-             Debug.Log("Micro unlocked");
+            alters[0].SetActive(false);
+            rocks[0].SetActive(true);
+            rocks[1].SetActive(true);
+            rocks[2].SetActive(true);
+            Debug.Log("Micro unlocked");
         }
+        
     }
 
     public void unlockControl()

@@ -12,6 +12,7 @@ TagManager:
   - SwordRange
   - Experience
   - Trade
+  - Alter
   layers:
   - Default
   - TransparentFX
