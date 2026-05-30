@@ -12,6 +12,7 @@ public class WorldTime : MonoBehaviour
 
     TimeSpan startTime = new TimeSpan(17, 0, 0);
     TimeSpan endTime = new TimeSpan(6, 0, 0);
+
     private void Start()
     {
         currentTime = new TimeSpan(6, 0 , 0);
@@ -23,7 +24,11 @@ public class WorldTime : MonoBehaviour
         bool isNight = currentTime >= startTime || currentTime <= endTime;
        if (isNight)
         {
-            playerUV.fillUV(10);
+            playerUV.isFilling = true;
+        }
+        else
+        {
+            playerUV.isFilling = false;
         }
     }
     private IEnumerator AddMinute()
@@ -33,6 +38,7 @@ public class WorldTime : MonoBehaviour
             if (!PauseController.isGamePaused)
         {
             currentTime += TimeSpan.FromMinutes(1);
+
             WorldTimeChanged?.Invoke(this, currentTime);
         }
             yield return new WaitForSeconds(minuteLength);
