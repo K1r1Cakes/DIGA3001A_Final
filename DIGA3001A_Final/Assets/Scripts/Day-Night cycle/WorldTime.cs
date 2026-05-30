@@ -5,14 +5,26 @@ using UnityEngine;
 public class WorldTime : MonoBehaviour
 {
     public event EventHandler<TimeSpan> WorldTimeChanged;
+    public PlayerUV playerUV;
    public float dayLength;
    private TimeSpan currentTime;
    private float minuteLength => dayLength / WorldTimeConstants.MinutesInDay;
 
+    TimeSpan startTime = new TimeSpan(17, 0, 0);
+    TimeSpan endTime = new TimeSpan(6, 0, 0);
     private void Start()
     {
         currentTime = new TimeSpan(6, 0 , 0);
         StartCoroutine(AddMinute());
+    }
+
+    private void Update()
+    {
+        bool isNight = currentTime >= startTime || currentTime <= endTime;
+       if (isNight)
+        {
+            playerUV.fillUV(10);
+        }
     }
     private IEnumerator AddMinute()
     {

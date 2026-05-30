@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Playerhealth : MonoBehaviour
 {
     public Image healthBar;
     public float healthAmount = 100f;
     public GameObject deathPanel;
+    public GameObject warnPanel;
+    public TextMeshProUGUI warnText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

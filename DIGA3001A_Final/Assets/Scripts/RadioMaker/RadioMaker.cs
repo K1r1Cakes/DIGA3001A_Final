@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class RadioMaker : MonoBehaviour
 {
+    public GameObject forestTrigger;
+    public GameObject desertTrigger;
     public bool isMicro =false;
     public bool isControl = false;
     public bool isAntenna = false;
@@ -31,20 +33,15 @@ public class RadioMaker : MonoBehaviour
 
     public void unlockForest()
     {
-        if (isMicro)
-        {
-            //Unlock forest
-            Debug.Log("Forest Unlocked");
-        }
+        
+        forestTrigger.SetActive(false);
+        Debug.Log("Forest Unlocked");
+        
     }
 
     public void unlockDesert()
     {
-        if (isControl)
-        {
-            //unlock desert
-            Debug.Log("Desert unlocked");
-        }
+       desertTrigger.SetActive(false);
     }
 
     public void unlockMicro()

@@ -13,6 +13,8 @@ public class Playerthirst : MonoBehaviour
     public Playerhealth playerhealth;
     
     public bool isThirsty = false;
+    public GameObject warnPanel;
+    public TextMeshProUGUI warnText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

@@ -1,3 +1,5 @@
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +12,9 @@ public class PlayerUV : MonoBehaviour
     public float uvTimer = 5f;
     public bool isFilling = false;
     public Image uvBar;
-    //public Playerhealth playerhealth;
+    public Playerhealth playerhealth;
+    public GameObject warnPanel;
+    public TextMeshProUGUI warnText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -46,7 +50,7 @@ public class PlayerUV : MonoBehaviour
             else
             {
                 Debug.Log("Player is too hot");
-                //playerhealth.TakeDamage(10);
+                playerhealth.TakeDamage(10);
             }
 
             globalUVTimer = uvTimer;
