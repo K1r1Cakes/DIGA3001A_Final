@@ -10,6 +10,7 @@ public class UseItem : MonoBehaviour
     public InventoryController inventory;
     public PlayerShoot shoot;
     public Item currentItem;
+    public RadioMaker radioMaker;
     public TextMeshProUGUI itemStatusText;
     private bool isHotBar = false;
 
@@ -70,6 +71,34 @@ public class UseItem : MonoBehaviour
         {
             itemStatusText.text = "Put in hotbar to use";
             isHotBar = true;
+        }
+
+        if (currentItem.itemName == "Micro Controller")
+        {
+            itemStatusText.text = "Added to radio";
+            radioMaker.isMicro = true;
+            isHotBar = false;
+        }
+
+        if (currentItem.itemName == "Controls")
+        {
+            itemStatusText.text = "Added to radio";
+            radioMaker.isControl = true;
+            isHotBar = false;
+        }
+
+        if (currentItem.itemName == "Antenna")
+        {
+            itemStatusText.text = "Added to radio";
+            radioMaker.isAntenna = true;
+            isHotBar = false;
+        }
+
+         if (currentItem.itemName == "Radio")
+        {
+            itemStatusText.text = "Radio made";
+            isHotBar = false;
+            //Calls end game
         }
 
         if (isHotBar == false)
