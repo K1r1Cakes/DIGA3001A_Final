@@ -26,7 +26,7 @@ public class ButtonActions : MonoBehaviour
 
     public void onResetClick()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Start Menu");
     }
 
     public void onIslandClick()

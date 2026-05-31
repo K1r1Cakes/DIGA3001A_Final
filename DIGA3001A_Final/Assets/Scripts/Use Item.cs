@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UseItem : MonoBehaviour
 {
@@ -102,6 +103,7 @@ public class UseItem : MonoBehaviour
         {
             itemStatusText.text = "Calling..";
             isHotBar = false;
+            SceneManager.LoadScene("End");
             //Calls end game
         }
 
