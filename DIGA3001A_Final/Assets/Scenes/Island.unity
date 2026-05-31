@@ -81753,13 +81753,14 @@ GameObject:
   - component: {fileID: 1145717259}
   - component: {fileID: 1145717258}
   - component: {fileID: 1145717260}
+  - component: {fileID: 1145717261}
   m_Layer: 5
   m_Name: Alerts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1145717257
 RectTransform:
   m_ObjectHideFlags: 0
@@ -81830,6 +81831,20 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1145717261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145717256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4df60fa8295f494458cbc7431247ef80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WarningMessagePanel
+  canvasGroup: {fileID: 1145717260}
+  warningText: {fileID: 597260973}
 --- !u!1 &1207102936
 GameObject:
   m_ObjectHideFlags: 0
@@ -82884,8 +82899,7 @@ MonoBehaviour:
   healthBar: {fileID: 943108940}
   healthAmount: 100
   deathPanel: {fileID: 1667665505}
-  warnPanel: {fileID: 0}
-  warnText: {fileID: 0}
+  warn: {fileID: 1145717261}
 --- !u!114 &1288354261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82903,6 +82917,7 @@ MonoBehaviour:
   bulletAmount: 10
   bulletAmountText: {fileID: 42123707}
   hotBarController: {fileID: 1615459533}
+  warn: {fileID: 1145717261}
 --- !u!114 &1288354262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82975,8 +82990,7 @@ MonoBehaviour:
   isFilling: 0
   uvBar: {fileID: 345546524}
   playerhealth: {fileID: 1288354260}
-  warnPanel: {fileID: 0}
-  warnText: {fileID: 0}
+  warn: {fileID: 1145717261}
 --- !u!114 &1288354267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87770,8 +87784,7 @@ MonoBehaviour:
   thirstBar: {fileID: 1141798497}
   playerhealth: {fileID: 1288354260}
   isThirsty: 0
-  warnPanel: {fileID: 0}
-  warnText: {fileID: 0}
+  warn: {fileID: 1145717261}
 --- !u!114 &1758853465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87791,8 +87804,7 @@ MonoBehaviour:
   hungerBar: {fileID: 764702728}
   playerhealth: {fileID: 1288354260}
   isHungry: 0
-  warnPanel: {fileID: 0}
-  warnText: {fileID: 0}
+  warn: {fileID: 1145717261}
 --- !u!114 &1758853466
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Data.Common;
 
 public class Playerhunger : MonoBehaviour
 {
@@ -12,8 +13,8 @@ public class Playerhunger : MonoBehaviour
     public Playerhealth playerhealth;
    
     public bool isHungry = false;
-    public GameObject warnPanel;
-    public TextMeshProUGUI warnText;
+    public WarningMessagePanel warn;
+    private bool warningShown = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,7 +36,7 @@ public class Playerhunger : MonoBehaviour
             if (hungerAmount > 0)
             {
               loseHunger(hungerDamage);
-              globalTimer = hungerTimer;  
+              globalTimer = hungerTimer; 
             }
             else
             {
@@ -43,70 +44,22 @@ public class Playerhunger : MonoBehaviour
              playerhealth.TakeDamage(10);
             }
             globalTimer = hungerTimer;
+
+             if(hungerAmount > 20)
+            {
+                warningShown = false;
+            }
+            
+             if(hungerAmount < 20 && !warningShown)
+            {
+                warn.showWarning("Hunger is low! Eat immediatley.", 2f);
+                warningShown = true;
+            }
         }
         
         
     }
 
-//     void loseHunger()
-//     {
-//         playerHunger -= 10f;
-
-//         if (playerHunger <= 1)
-//         {
-//            // hungerText.text = "You are starving. Eat now!";
-//             isHungry = true;
-//         }
-//         else
-//         {
-//             isHungry = false;
-//         }
-
-//         if (playerHunger < 0)
-//         {
-//             playerHunger = 0;
-//         }
-
-//         hungerFill();
-//     }
-//     void hungerFill()
-//     {
-//      
-
-//         for(int i = 0; i < hungerImage.Length; i++)
-//         {
-//             float remainingHunger = playerHunger - i;
-
-//             if (remainingHunger >= 1)
-//             {
-//                 hungerImage[i].fillAmount = 1f;
-//             }
-//             else if(remainingHunger > 0)
-//             {
-//                 hungerImage[i].fillAmount = 0.5f;
-//             }
-//             else
-//             {
-//                 hungerImage[i].fillAmount =0f;
-//             }
-//         }
-//     }
-
-//     public void restoreHunger(float hungerAmount)
-//     {
-//         if (playerHunger < hungerImage.Length)
-//         {
-//             playerHunger += hungerAmount;
-//         }
-
-//         if(playerHunger > hungerImage.Length)
-//         {
-//             playerHunger = hungerImage.Length;
-//         }
-
-
-//         hungerFill();
-//     }
 
     public void loseHunger(float hunger)
     {

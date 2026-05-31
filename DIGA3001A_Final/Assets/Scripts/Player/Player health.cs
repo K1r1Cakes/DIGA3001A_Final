@@ -7,8 +7,8 @@ public class Playerhealth : MonoBehaviour
     public Image healthBar;
     public float healthAmount = 100f;
     public GameObject deathPanel;
-    public GameObject warnPanel;
-    public TextMeshProUGUI warnText;
+    public WarningMessagePanel warn;
+    private bool warningShown = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,6 +26,17 @@ public class Playerhealth : MonoBehaviour
         healthAmount -= damage;
         healthBar.fillAmount = healthAmount / 100f;
 
+        if(healthAmount > 20)
+        {
+            warningShown = false;
+        }
+
+        if (healthAmount <= 20 && !warningShown)
+        {
+            warn.showWarning("Health is low!", 2f);
+            warningShown = true;
+        }
+        
         if (healthAmount  == 0)
         {
             //Lose condition

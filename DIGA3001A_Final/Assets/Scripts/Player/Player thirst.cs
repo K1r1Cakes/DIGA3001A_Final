@@ -13,8 +13,9 @@ public class Playerthirst : MonoBehaviour
     public Playerhealth playerhealth;
     
     public bool isThirsty = false;
-    public GameObject warnPanel;
-    public TextMeshProUGUI warnText;
+    public WarningMessagePanel warn;
+    private bool warningShown = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -36,14 +37,25 @@ public class Playerthirst : MonoBehaviour
             if (thirstAmount > 0)
             {
               loseThirst(thirstDamage);
-              globalThirstTimer = thirstTimer;  
             }
             else
             {
              Debug.Log("Player is thirsty!");
              playerhealth.TakeDamage(10);
             }
+
             globalThirstTimer = thirstTimer;
+
+            if (thirstAmount <= 20 && !warningShown)
+            {
+                warn.showWarning("Thirst is low! Seek water immediately.", 2f);
+                warningShown = true;
+            }
+
+            if (thirstAmount > 20)
+            {
+                warningShown = false;
+            }
         }
     }
 

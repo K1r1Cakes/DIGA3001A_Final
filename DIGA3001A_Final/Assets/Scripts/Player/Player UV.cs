@@ -13,8 +13,8 @@ public class PlayerUV : MonoBehaviour
     public bool isFilling = false;
     public Image uvBar;
     public Playerhealth playerhealth;
-    public GameObject warnPanel;
-    public TextMeshProUGUI warnText;
+    public WarningMessagePanel warn;
+    private bool warningShown = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -54,6 +54,17 @@ public class PlayerUV : MonoBehaviour
             }
 
             globalUVTimer = uvTimer;
+
+            if (uvAmount <= 10 && !warningShown)
+            {
+                warn.showWarning("You are too hot! Find shade under a tree now.", 2f);
+                warningShown = true;
+            }
+
+            if (uvAmount > 10)
+            {
+                warningShown= false;
+            }
         }
     }
 

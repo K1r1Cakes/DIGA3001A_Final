@@ -9,6 +9,8 @@ public class PlayerShoot : MonoBehaviour
     public int bulletAmount = 10;
     public TextMeshProUGUI bulletAmountText;
     public HotBarController hotBarController;
+    public WarningMessagePanel warn;
+    private bool warningShown = false;
     
     //shoot form
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -36,7 +38,7 @@ public class PlayerShoot : MonoBehaviour
             return;
         }
 
-        if (hotBarController.selectedItem.itemName != "Gun")
+        if (hotBarController.selectedItem.itemName != "Slingshot")
         {
             return;
         }
@@ -49,9 +51,11 @@ public class PlayerShoot : MonoBehaviour
         
         if (bulletAmount <= 0)
         {
+             warn.showWarning("No buts, no cuts, NO COCONUTS", 1f);
             bulletAmount = 0;
             return;
         }
+
         
             Instantiate(bulletPrefab, transform.position, transform.rotation);
             bulletAmount -= 1;
