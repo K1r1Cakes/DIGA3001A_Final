@@ -5,7 +5,7 @@ using TMPro;
 public class PlayerLevel : MonoBehaviour
 {
     public float levelAmount = 0f;
-    public float experienceAmount = 100f; //Change
+    public float experienceAmount = 20f; //Change
     //public Image LevelBar;
     public TextMeshProUGUI levelText;
     public TextMeshProUGUI microText;
@@ -38,11 +38,9 @@ public class PlayerLevel : MonoBehaviour
 
     public void gainLevel(float experience)
     {
-       if (levelAmount < 100)
-        {
             levelAmount += experience;
            // LevelBar.fillAmount = levelAmount/100f;
-        }
+        
     }
 
     public void loseLevel(float experience)
