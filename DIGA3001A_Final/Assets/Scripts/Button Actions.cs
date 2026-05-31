@@ -33,4 +33,9 @@ public class ButtonActions : MonoBehaviour
     {
         SceneManager.LoadScene("Island");
     }
+
+    public void onIntroScene()
+    {
+        SceneManager.LoadScene("Introduction");
+    }
 }
