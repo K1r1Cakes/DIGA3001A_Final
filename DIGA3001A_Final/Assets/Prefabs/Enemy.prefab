@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 680207408183664343}
   - component: {fileID: 542912604015959258}
   - component: {fileID: 1711418574362798649}
+  - component: {fileID: 1735759302894692996}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -272,3 +273,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1735759302894692996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4393454901865770966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ad4a56171ae00449c10e545dbd3939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDespawn
+  despawnTime: 30

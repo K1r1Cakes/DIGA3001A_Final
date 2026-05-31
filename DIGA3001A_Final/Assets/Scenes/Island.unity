@@ -96147,7 +96147,7 @@ MonoBehaviour:
   - {fileID: 971382780}
   cherry: {fileID: 2920887495875229284, guid: 84a5b770d0cd74b4891db8b9f9175b78, type: 3}
   foodTimer: 0
-  timeBetweenFoodSpawns: 5
+  timeBetweenFoodSpawns: 30
 --- !u!114 &1758853474
 MonoBehaviour:
   m_ObjectHideFlags: 0
