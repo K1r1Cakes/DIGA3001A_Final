@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UseItem : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class UseItem : MonoBehaviour
     public Item currentItem;
     public RadioMaker radioMaker;
     public TextMeshProUGUI itemStatusText;
+    public Button useButton;
     private bool isHotBar = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -106,6 +108,7 @@ public class UseItem : MonoBehaviour
         if (isHotBar == false)
         {
             inventory.RemoveItemFromSlot(currentItem.parentSlot);
+            useButton.interactable = false;
         }
        
     }

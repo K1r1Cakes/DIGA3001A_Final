@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using TMPro;
 
 public class ItemSelect : MonoBehaviour, IPointerClickHandler
@@ -49,6 +50,7 @@ public class ItemSelect : MonoBehaviour, IPointerClickHandler
                    
 
                      Debug.Log("Item selected");
+                     useItem.useButton.interactable = true;
                      isItemSelected = true;
                 }
             }
