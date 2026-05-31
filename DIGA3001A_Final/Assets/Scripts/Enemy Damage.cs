@@ -10,7 +10,7 @@ public class EnemyDamage : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+         playerSword = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSword>();
     }
 
     // Update is called once per frame

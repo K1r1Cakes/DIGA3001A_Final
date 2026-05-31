@@ -31,6 +31,14 @@ public class New_Enemy : MonoBehaviour
 
      Rigidbody2D rb;
 
+    public void Initialize(Transform player, Transform[] points)
+    {
+        target = player;
+        patrolPoints = points;
+
+        GoToNextPatrolPoint();
+    }
+
      private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -40,7 +48,7 @@ public class New_Enemy : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        GoToNextPatrolPoint();
+       // GoToNextPatrolPoint();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
     }
