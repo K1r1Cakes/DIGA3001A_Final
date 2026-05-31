@@ -11,6 +11,7 @@ public class RadioMaker : MonoBehaviour
     public bool isControl = false;
     public bool isAntenna = false;
     public PlayerLevel playerLevel;
+    public GameObject[] alterPanels;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -54,6 +55,8 @@ public class RadioMaker : MonoBehaviour
             rocks[0].SetActive(true);
             rocks[1].SetActive(true);
             rocks[2].SetActive(true);
+            alterPanels[0].SetActive(false);
+            PauseController.SetPause(false);
             Debug.Log("Micro unlocked");
         }
         

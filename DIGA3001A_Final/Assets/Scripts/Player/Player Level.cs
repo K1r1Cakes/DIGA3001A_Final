@@ -8,6 +8,7 @@ public class PlayerLevel : MonoBehaviour
     public float experienceAmount = 100f; //Change
     //public Image LevelBar;
     public TextMeshProUGUI levelText;
+    public TextMeshProUGUI microText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,6 +20,7 @@ public class PlayerLevel : MonoBehaviour
     void Update()
     {
         levelText.text = levelAmount.ToString();
+        microText.text = levelAmount.ToString();
     }
 
     private void OnTriggerEnter2D(Collider2D collide)
