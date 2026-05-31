@@ -100,7 +100,7 @@ public class UseItem : MonoBehaviour
 
          if (currentItem.itemName == "Radio")
         {
-            itemStatusText.text = "Radio made";
+            itemStatusText.text = "Calling..";
             isHotBar = false;
             //Calls end game
         }

@@ -13,6 +13,9 @@ public class RadioMaker : MonoBehaviour
     public PlayerLevel playerLevel;
     public GameObject allAlterPanel;
     public GameObject[] alterPanels;
+    public GameObject radio;
+    public bool isRadioMade = false;
+    public InventoryController inventory;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,7 +25,12 @@ public class RadioMaker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
+        if (!isRadioMade)
+        {
+            radioMake();
+
+        }
     }
 
     public void radioMake()
@@ -30,7 +38,9 @@ public class RadioMaker : MonoBehaviour
         if (isMicro && isControl && isAntenna)
         {
             //insatiate radio
+            inventory.AddItem(radio);
             Debug.Log("Radio made");
+            isRadioMade = true;
         }
 
     }
@@ -49,7 +59,7 @@ public class RadioMaker : MonoBehaviour
 
     public void unlockMicro()
     {
-        if (playerLevel.levelAmount == 100)
+        if (playerLevel.levelAmount >= 100)
         {
             //Unlock mircro
             alters[0].SetActive(false);
@@ -67,7 +77,7 @@ public class RadioMaker : MonoBehaviour
 
     public void unlockControl()
     {
-        if (playerLevel.levelAmount == 100)
+        if (playerLevel.levelAmount >= 100)
         {
             //Unlock Control
             alters[1].SetActive(false);
@@ -84,7 +94,7 @@ public class RadioMaker : MonoBehaviour
 
     public void unlockAntenna()
     {
-        if (playerLevel.levelAmount == 100)
+        if (playerLevel.levelAmount >= 100)
         {
             //Unlock Antenna
             alters[2].SetActive(false);
