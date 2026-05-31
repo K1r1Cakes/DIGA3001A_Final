@@ -30,7 +30,8 @@ public class FoodSpawn : MonoBehaviour
             {
                 if(Random.value < 0.5f)
                 {
-                    Instantiate(cherry, spawnPoint.transform.position, Quaternion.identity);
+                    GameObject spawnedCherry = Instantiate(cherry, spawnPoint.transform.position, Quaternion.identity);
+                    Destroy(spawnedCherry, 30f);
                 }
             }
         }
