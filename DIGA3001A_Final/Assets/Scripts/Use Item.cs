@@ -87,7 +87,7 @@ public class UseItem : MonoBehaviour
         {
             itemStatusText.text = "Added to radio";
             radioMaker.isControl = true;
-            radioMaker.unlockForest();
+            radioMaker.unlockDesert();
             isHotBar = false;
         }
 

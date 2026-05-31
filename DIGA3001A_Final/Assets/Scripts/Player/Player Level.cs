@@ -9,6 +9,8 @@ public class PlayerLevel : MonoBehaviour
     //public Image LevelBar;
     public TextMeshProUGUI levelText;
     public TextMeshProUGUI microText;
+    public TextMeshProUGUI controlText;
+    public TextMeshProUGUI antennaText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,6 +23,8 @@ public class PlayerLevel : MonoBehaviour
     {
         levelText.text = levelAmount.ToString();
         microText.text = levelAmount.ToString();
+        controlText.text = levelAmount.ToString();
+        antennaText.text = levelAmount.ToString();
     }
 
     private void OnTriggerEnter2D(Collider2D collide)
