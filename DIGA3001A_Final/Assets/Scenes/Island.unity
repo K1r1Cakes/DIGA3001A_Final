@@ -593,7 +593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.22197595, b: 0.5396226, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -96264,7 +96264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c2506b613ffe64e8b779456be032b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Playerhunger
-  hungerTimer: 5
+  hungerTimer: 30
   globalTimer: 0
   hungerAmount: 100
   hungerDamage: 10
@@ -96478,7 +96478,7 @@ MonoBehaviour:
   - {fileID: 560744262}
   enemy: {fileID: 4393454901865770966, guid: 5aa3ab70845c8184096815452fc81377, type: 3}
   enemyTimer: 0
-  timeBetweenEnemySpawns: 20
+  timeBetweenEnemySpawns: 15
 --- !u!1 &1778997949
 GameObject:
   m_ObjectHideFlags: 0
