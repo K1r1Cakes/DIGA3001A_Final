@@ -1475,7 +1475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 70}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &95005194
@@ -1498,10 +1498,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You died
+  m_text: YOU DIED
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3b1c427cdfe070b4fb64161edffb620b, type: 2}
+  m_sharedMaterial: {fileID: -7780427573475301999, guid: 3b1c427cdfe070b4fb64161edffb620b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1525,15 +1525,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -3002,7 +3002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShopItem
   itemName: Medkit
-  itemCost: 10
+  itemCost: 5
   itemPrefab: {fileID: 7451629117569456653, guid: 40013715c8ea3fe44bf6624d8abad674, type: 3}
 --- !u!114 &197604586
 MonoBehaviour:
@@ -3895,7 +3895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShopItem
   itemName: Coconut x 5
-  itemCost: 10
+  itemCost: 15
   itemPrefab: {fileID: 5950627188604624988, guid: 40db0ea6f83324345beecc4b1eb728d5, type: 3}
 --- !u!114 &276000534
 MonoBehaviour:
@@ -4158,6 +4158,7 @@ MonoBehaviour:
   - There is something carved in the rock...
   - 'It reads: "100 orbs and the chip is yours." '
   - Hmmm... I wonder what part this is
+  - '[PRESS i TO INTERACT]'
   textSpeed: 0.1
   isDone: 0
 --- !u!61 &299778640
@@ -5792,7 +5793,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10
+  m_text: 5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3b1c427cdfe070b4fb64161edffb620b, type: 2}
   m_sharedMaterial: {fileID: -7780427573475301999, guid: 3b1c427cdfe070b4fb64161edffb620b, type: 2}
@@ -7597,7 +7598,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10
+  m_text: 5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3b1c427cdfe070b4fb64161edffb620b, type: 2}
   m_sharedMaterial: {fileID: -7780427573475301999, guid: 3b1c427cdfe070b4fb64161edffb620b, type: 2}
@@ -10151,7 +10152,8 @@ MonoBehaviour:
   - You'll know it when you see it!
   - It's best you dont question what I am... I might not be real... don't want to
     drive you crazy like the others now.
-  textSpeed: 0
+  - '[PRESS i TO INTERACT]'
+  textSpeed: 0.1
   isDone: 0
 --- !u!61 &643979252
 BoxCollider2D:
@@ -90009,7 +90011,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11, y: -156.43896}
+  m_AnchoredPosition: {x: 11, y: -106}
   m_SizeDelta: {x: 160, y: 88.878}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1406879254
@@ -94756,7 +94758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9245283, g: 0.70568556, b: 0.3471341, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -95948,7 +95950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShopItem
   itemName: Water
-  itemCost: 10
+  itemCost: 5
   itemPrefab: {fileID: 56438547118931193, guid: 77dd79240f9a6c040923d6ea9b2512fa, type: 3}
 --- !u!114 &1751748411
 MonoBehaviour:
@@ -96256,6 +96258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46d6bc161379b464c891343068f74dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonActions
+  controlPanel: {fileID: 0}
 --- !u!114 &1758853472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96756,10 +96759,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Reset
+  m_text: HOME
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3b1c427cdfe070b4fb64161edffb620b, type: 2}
+  m_sharedMaterial: {fileID: -7780427573475301999, guid: 3b1c427cdfe070b4fb64161edffb620b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -96783,8 +96786,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -98615,7 +98618,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10
+  m_text: 15
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3b1c427cdfe070b4fb64161edffb620b, type: 2}
   m_sharedMaterial: {fileID: -7780427573475301999, guid: 3b1c427cdfe070b4fb64161edffb620b, type: 2}
