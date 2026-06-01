@@ -39,13 +39,13 @@ public class PlayerLevel : MonoBehaviour
     public void gainLevel(float experience)
     {
             levelAmount += experience;
-           // LevelBar.fillAmount = levelAmount/100f;
+          
         
     }
 
     public void loseLevel(float experience)
     {
         levelAmount -= experience;
-       // LevelBar.fillAmount = levelAmount/100f;
+     
     }
 }

@@ -89036,7 +89036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerLevel
   levelAmount: 0
-  experienceAmount: 100
+  experienceAmount: 20
   levelText: {fileID: 172483409}
   microText: {fileID: 307353325}
   controlText: {fileID: 1858500503}
@@ -91237,63 +91237,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1001 &1499302199
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6200219448171626603, guid: 56d086b17716e7f40b79138cbd45701b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -14.381286
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200219448171626603, guid: 56d086b17716e7f40b79138cbd45701b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.560239
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200219448171626603, guid: 56d086b17716e7f40b79138cbd45701b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200219448171626603, guid: 56d086b17716e7f40b79138cbd45701b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200219448171626603, guid: 56d086b17716e7f40b79138cbd45701b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200219448171626603, guid: 56d086b17716e7f40b79138cbd45701b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200219448171626603, guid: 56d086b17716e7f40b79138cbd45701b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200219448171626603, guid: 56d086b17716e7f40b79138cbd45701b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200219448171626603, guid: 56d086b17716e7f40b79138cbd45701b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200219448171626603, guid: 56d086b17716e7f40b79138cbd45701b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7605575955043986146, guid: 56d086b17716e7f40b79138cbd45701b, type: 3}
-      propertyPath: m_Name
-      value: Experience ball
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 56d086b17716e7f40b79138cbd45701b, type: 3}
 --- !u!1 &1504514024
 GameObject:
   m_ObjectHideFlags: 0
@@ -101187,7 +101130,6 @@ SceneRoots:
   - {fileID: 304034178}
   - {fileID: 1962126656}
   - {fileID: 774619330}
-  - {fileID: 1499302199}
   - {fileID: 677665543}
   - {fileID: 1423296979}
   - {fileID: 1516555751}

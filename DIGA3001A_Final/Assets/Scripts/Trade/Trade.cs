@@ -24,6 +24,7 @@ public class Trade : MonoBehaviour
                 warn.showWarning("Inventory Full", 2f);
                 return;
             }
+            
             inventory.AddItem(shopItem.itemPrefab);
             playerLevel.loseLevel(shopItem.itemCost);
         }
