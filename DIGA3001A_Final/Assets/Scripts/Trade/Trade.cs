@@ -44,7 +44,7 @@ public class Trade : MonoBehaviour
             infoText.text = "Use this item to +10 health";
         }
 
-        if (shopItem.itemName == "Coconut")
+        if (shopItem.itemName == "Coconut x 5")
         {
             infoText.text = "Use this item to +5 coconuts.";
         }

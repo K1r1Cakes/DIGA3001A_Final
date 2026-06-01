@@ -71,7 +71,7 @@ public class UseItem : MonoBehaviour
             isHotBar = false;
         }
 
-        if (currentItem.itemName == "Gun")
+        if (currentItem.itemName == "Slingshot")
         {
             SoundEffectManager.Play("itemUse");
             itemStatusText.text = "Put in hotbar to use";
