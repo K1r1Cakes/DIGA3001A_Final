@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.EventSystems;
-public class ButtonActions : MonoBehaviour, IPointerEnterHandler
+
+public class ButtonActions : MonoBehaviour
 {
     private Dialogue dialogue;
     public GameObject controlPanel;
@@ -49,8 +49,5 @@ public class ButtonActions : MonoBehaviour, IPointerEnterHandler
         }
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        SoundEffectManager.Play("Hover");
-    }
+   
 }

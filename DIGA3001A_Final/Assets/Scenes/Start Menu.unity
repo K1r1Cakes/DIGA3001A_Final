@@ -278,8 +278,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 704648390}
-        m_TargetAssemblyTypeName: ButtonActions, Assembly-CSharp
+      - m_Target: {fileID: 704648395}
+        m_TargetAssemblyTypeName: StartMenuUi, Assembly-CSharp
         m_MethodName: onControls
         m_Mode: 1
         m_Arguments:
@@ -685,8 +685,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 704648390}
-        m_TargetAssemblyTypeName: ButtonActions, Assembly-CSharp
+      - m_Target: {fileID: 704648395}
+        m_TargetAssemblyTypeName: StartMenuUi, Assembly-CSharp
         m_MethodName: onControls
         m_Mode: 1
         m_Arguments:
@@ -744,10 +744,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 704648391}
-  - component: {fileID: 704648390}
   - component: {fileID: 704648394}
   - component: {fileID: 704648393}
   - component: {fileID: 704648392}
+  - component: {fileID: 704648395}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -755,19 +755,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &704648390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 704648389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46d6bc161379b464c891343068f74dcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ButtonActions
-  controlPanel: {fileID: 10461645}
 --- !u!4 &704648391
 Transform:
   m_ObjectHideFlags: 0
@@ -908,6 +895,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &704648395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704648389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2652f7c138ae23242b4403eb935e1c74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StartMenuUi
+  controlPanel: {fileID: 10461645}
 --- !u!1 &732997206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,8 +1128,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 704648390}
-        m_TargetAssemblyTypeName: ButtonActions, Assembly-CSharp
+      - m_Target: {fileID: 704648395}
+        m_TargetAssemblyTypeName: StartMenuUi, Assembly-CSharp
         m_MethodName: onExitClick
         m_Mode: 1
         m_Arguments:
@@ -1933,8 +1933,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 704648390}
-        m_TargetAssemblyTypeName: ButtonActions, Assembly-CSharp
+      - m_Target: {fileID: 704648395}
+        m_TargetAssemblyTypeName: StartMenuUi, Assembly-CSharp
         m_MethodName: onIntroScene
         m_Mode: 1
         m_Arguments:
@@ -1989,5 +1989,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 603242426}
   - {fileID: 1875490695}
-  - {fileID: 1364750863}
   - {fileID: 704648391}
+  - {fileID: 1364750863}

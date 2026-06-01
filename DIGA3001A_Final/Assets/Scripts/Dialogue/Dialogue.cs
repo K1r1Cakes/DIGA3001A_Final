@@ -1,7 +1,6 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
-using UnityEditor;
 using UnityEngine.SceneManagement;
 
 public class Dialogue : MonoBehaviour
@@ -10,11 +9,21 @@ public class Dialogue : MonoBehaviour
     public string[] lines;
     public float textSpeed;
     private int index;
+    private Coroutine typingCoroutine;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    IEnumerator Start()
     {
-        dialogueText.text = string.Empty;
-        StartDialogue();
+    yield return new WaitForEndOfFrame();
+    yield return null;
+
+    if (dialogueText == null)
+    {
+        Debug.LogError("DialogueText is NULL after scene load!");
+        yield break;
+    }
+
+    dialogueText.text = "";
+    StartDialogue();
     }
 
     // Update is called once per frame
@@ -26,7 +35,11 @@ public class Dialogue : MonoBehaviour
     void StartDialogue()
     {
         index = 0;
-        StartCoroutine(TypeLine());
+
+        if (typingCoroutine != null)
+        StopCoroutine(typingCoroutine);
+
+        typingCoroutine = StartCoroutine(TypeLine());
     }
 
     IEnumerator TypeLine()
@@ -41,16 +54,20 @@ public class Dialogue : MonoBehaviour
     public void NextLine()
     {
         if (index < lines.Length - 1)
-        {
-            SoundEffectManager.Play("Next");
-            index++;
-            dialogueText.text = string.Empty;
-            StartCoroutine(TypeLine());
-        }
-        else
-        {
-            SceneManager.LoadScene("Island");
-            
-        }
+    {
+        SoundEffectManager.Play("Next");
+        index++;
+
+        dialogueText.text = string.Empty;
+
+        if (typingCoroutine != null)
+            StopCoroutine(typingCoroutine);
+
+        typingCoroutine = StartCoroutine(TypeLine());
+    }
+    else
+    {
+        SceneManager.LoadScene("Island");
+    }
     }
 }

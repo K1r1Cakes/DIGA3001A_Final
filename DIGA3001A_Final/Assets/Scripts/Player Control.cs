@@ -163,6 +163,15 @@ public partial class @PlayerControl: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Controls"",
+                    ""type"": ""Button"",
+                    ""id"": ""22cb8e71-f394-4263-a1f6-db150bd9dd5a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -352,6 +361,17 @@ public partial class @PlayerControl: IInputActionCollection2, IDisposable
                     ""action"": ""Alter"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""02417fef-d619-4614-bed3-4fbf52a3b7db"",
+                    ""path"": ""<Keyboard>/ctrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Controls"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -368,6 +388,7 @@ public partial class @PlayerControl: IInputActionCollection2, IDisposable
         m_Movement_Swing = m_Movement.FindAction("Swing", throwIfNotFound: true);
         m_Movement_Trade = m_Movement.FindAction("Trade", throwIfNotFound: true);
         m_Movement_Alter = m_Movement.FindAction("Alter", throwIfNotFound: true);
+        m_Movement_Controls = m_Movement.FindAction("Controls", throwIfNotFound: true);
     }
 
     ~@PlayerControl()
@@ -456,6 +477,7 @@ public partial class @PlayerControl: IInputActionCollection2, IDisposable
     private readonly InputAction m_Movement_Swing;
     private readonly InputAction m_Movement_Trade;
     private readonly InputAction m_Movement_Alter;
+    private readonly InputAction m_Movement_Controls;
     /// <summary>
     /// Provides access to input actions defined in input action map "Movement".
     /// </summary>
@@ -499,6 +521,10 @@ public partial class @PlayerControl: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Movement/Alter".
         /// </summary>
         public InputAction @Alter => m_Wrapper.m_Movement_Alter;
+        /// <summary>
+        /// Provides access to the underlying input action "Movement/Controls".
+        /// </summary>
+        public InputAction @Controls => m_Wrapper.m_Movement_Controls;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -549,6 +575,9 @@ public partial class @PlayerControl: IInputActionCollection2, IDisposable
             @Alter.started += instance.OnAlter;
             @Alter.performed += instance.OnAlter;
             @Alter.canceled += instance.OnAlter;
+            @Controls.started += instance.OnControls;
+            @Controls.performed += instance.OnControls;
+            @Controls.canceled += instance.OnControls;
         }
 
         /// <summary>
@@ -584,6 +613,9 @@ public partial class @PlayerControl: IInputActionCollection2, IDisposable
             @Alter.started -= instance.OnAlter;
             @Alter.performed -= instance.OnAlter;
             @Alter.canceled -= instance.OnAlter;
+            @Controls.started -= instance.OnControls;
+            @Controls.performed -= instance.OnControls;
+            @Controls.canceled -= instance.OnControls;
         }
 
         /// <summary>
@@ -680,5 +712,12 @@ public partial class @PlayerControl: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnAlter(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Controls" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnControls(InputAction.CallbackContext context);
     }
 }

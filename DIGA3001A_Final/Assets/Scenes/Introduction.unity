@@ -352,6 +352,7 @@ RectTransform:
   m_Children:
   - {fileID: 1077674512}
   - {fileID: 1305007304}
+  - {fileID: 1210012686}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -798,7 +799,7 @@ GameObject:
   - component: {fileID: 1210012689}
   - component: {fileID: 1210012688}
   m_Layer: 0
-  m_Name: Game Controller
+  m_Name: Game Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -816,6 +817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46d6bc161379b464c891343068f74dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonActions
+  controlPanel: {fileID: 1077674511}
 --- !u!4 &1210012686
 Transform:
   m_ObjectHideFlags: 0
@@ -824,12 +826,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210012684}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 919.63165, y: 428.5191, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -40.368347, y: -111.480896, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 526533418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1210012687
 MonoBehaviour:
@@ -1195,4 +1197,3 @@ SceneRoots:
   - {fileID: 1986513310}
   - {fileID: 526533418}
   - {fileID: 1151849240}
-  - {fileID: 1210012686}
