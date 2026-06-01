@@ -40,12 +40,16 @@ public class UseItem : MonoBehaviour
             isHotBar = false;
         }
 
-        if (currentItem.itemName == "Food")
+        if (currentItem.itemName == "Cherry")
         {
             Debug.Log("Eat food");
+
+            isHotBar = false;
+            Debug.Log("Eat food audio");
+            SoundEffectManager.Play("Eat");
             hunger.fillHunger(10);
             itemStatusText.text = "Food consumed";
-            isHotBar = false;
+            
         }
 
         if (currentItem.itemName == "Health")
