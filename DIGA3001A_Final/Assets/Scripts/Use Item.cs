@@ -36,7 +36,7 @@ public class UseItem : MonoBehaviour
         {
             Debug.Log("Drink water");
             SoundEffectManager.Play("Drink");
-            thirst.fillThirst(10);
+            thirst.fillThirst(30);
             itemStatusText.text = "Water consumed";
             isHotBar = false;
         }
@@ -48,7 +48,7 @@ public class UseItem : MonoBehaviour
             isHotBar = false;
             Debug.Log("Eat food audio");
             SoundEffectManager.Play("Eat");
-            hunger.fillHunger(10);
+            hunger.fillHunger(30);
             itemStatusText.text = "Food consumed";
             
         }
@@ -57,7 +57,7 @@ public class UseItem : MonoBehaviour
         {
             Debug.Log("Heal up");
             SoundEffectManager.Play("Heal");
-            health.fillHealth(10);
+            health.fillHealth(30);
             itemStatusText.text = "Medkit consumed";
             isHotBar = false;
         }

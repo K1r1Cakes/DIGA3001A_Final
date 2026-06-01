@@ -31,7 +31,7 @@ public class Trade : MonoBehaviour
 
         if (shopItem.itemName == "Stick")
         {
-            infoText.text = "Place the stick in the hotbar and select it by using teh corresponding number.";
+            infoText.text = "Place the stick in the hotbar and select it by using the corresponding number.";
         }
 
         if (shopItem.itemName == "Water")

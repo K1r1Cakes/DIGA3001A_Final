@@ -91275,7 +91275,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1758853471}
         m_TargetAssemblyTypeName: ButtonActions, Assembly-CSharp
-        m_MethodName: onResetClick
+        m_MethodName: onExitClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -98111,7 +98111,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: HOME
+  m_text: EXIT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3b1c427cdfe070b4fb64161edffb620b, type: 2}
   m_sharedMaterial: {fileID: -7780427573475301999, guid: 3b1c427cdfe070b4fb64161edffb620b, type: 2}
