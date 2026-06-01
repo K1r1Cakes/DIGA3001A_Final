@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 public class ItemCollection : MonoBehaviour
 {
+    public WarningMessagePanel warn;
+    private bool warningShown = false;
     private bool isNear = false;
     private GameObject itemPrefab;
     private InventoryController inventoryController;
@@ -23,8 +25,15 @@ public class ItemCollection : MonoBehaviour
     {
         if(!context.performed) return;
 
+        
        if (isNear == true && itemPrefab != null)
         {
+            if (inventoryController.isInventoryFull())
+            {
+                warn.showWarning("Inventory Full", 2f);
+                return;
+            }
+
             inventoryController.AddItem(itemPrefab);
             Destroy(itemPrefab);
             itemPrefab = null;

@@ -947,6 +947,7 @@ MonoBehaviour:
   inventory: {fileID: 1758853466}
   playerLevel: {fileID: 1288354268}
   infoText: {fileID: 1289500778}
+  warn: {fileID: 1145717261}
 --- !u!1 &55975104
 GameObject:
   m_ObjectHideFlags: 0
@@ -2186,7 +2187,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: /100
+  m_text: /200
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3b1c427cdfe070b4fb64161edffb620b, type: 2}
   m_sharedMaterial: {fileID: -7780427573475301999, guid: 3b1c427cdfe070b4fb64161edffb620b, type: 2}
@@ -2987,6 +2988,7 @@ MonoBehaviour:
   inventory: {fileID: 1758853466}
   playerLevel: {fileID: 1288354268}
   infoText: {fileID: 1289500778}
+  warn: {fileID: 1145717261}
 --- !u!114 &197604585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3879,6 +3881,7 @@ MonoBehaviour:
   inventory: {fileID: 1758853466}
   playerLevel: {fileID: 1288354268}
   infoText: {fileID: 1289500778}
+  warn: {fileID: 1145717261}
 --- !u!114 &276000533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4101,7 +4104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldTime
   playerUV: {fileID: 1288354266}
-  dayLength: 60
+  dayLength: 120
 --- !u!4 &293078364
 Transform:
   m_ObjectHideFlags: 0
@@ -8651,7 +8654,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: /100
+  m_text: /150
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3b1c427cdfe070b4fb64161edffb620b, type: 2}
   m_sharedMaterial: {fileID: -7780427573475301999, guid: 3b1c427cdfe070b4fb64161edffb620b, type: 2}
@@ -8765,8 +8768,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.3576, y: -2.1787}
-  m_SizeDelta: {x: 409.1624, y: 132.7935}
+  m_AnchoredPosition: {x: 3.7027, y: -2.1787}
+  m_SizeDelta: {x: 363.3233, y: 132.7935}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &597260973
 MonoBehaviour:
@@ -87084,8 +87087,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 707.5, y: 251.28}
-  m_SizeDelta: {x: -1477, y: -917.7104}
+  m_AnchoredPosition: {x: 733.8142, y: 251.28}
+  m_SizeDelta: {x: -1529.6285, y: -917.7104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1145717258
 MonoBehaviour:
@@ -88955,6 +88958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 645b4ca46c22d604e88a78b74c98f007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemCollection
+  warn: {fileID: 1145717261}
 --- !u!114 &1288354264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95782,6 +95786,7 @@ MonoBehaviour:
   inventory: {fileID: 1758853466}
   playerLevel: {fileID: 1288354268}
   infoText: {fileID: 1289500778}
+  warn: {fileID: 1145717261}
 --- !u!114 &1751748410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96028,6 +96033,7 @@ MonoBehaviour:
   slotCount: 10
   itemNameLabel: {fileID: 208448031}
   itemPrefabs: []
+  warn: {fileID: 1145717261}
 --- !u!114 &1758853467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96918,30 +96924,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1977089416008574008, guid: da31c7b62de5e3043a63cd3eb48152fb, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -5552911669496020337, guid: 9437d615057fe3e408288a1ee7ea761a, type: 3}
-    - target: {fileID: 2781063338721128597, guid: da31c7b62de5e3043a63cd3eb48152fb, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -75730262, guid: 69ab04fb130fc7f43b523f29650fb932, type: 3}
-    - target: {fileID: 2781063338721128597, guid: da31c7b62de5e3043a63cd3eb48152fb, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2781063338721128597, guid: da31c7b62de5e3043a63cd3eb48152fb, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1033926555
-      objectReference: {fileID: 0}
-    - target: {fileID: 2989339321757525173, guid: da31c7b62de5e3043a63cd3eb48152fb, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.125
-      objectReference: {fileID: 0}
-    - target: {fileID: 2989339321757525173, guid: da31c7b62de5e3043a63cd3eb48152fb, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.125
-      objectReference: {fileID: 0}
     - target: {fileID: 5796117882965751537, guid: da31c7b62de5e3043a63cd3eb48152fb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

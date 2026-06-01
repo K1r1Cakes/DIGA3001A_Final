@@ -77,14 +77,14 @@ public class RadioMaker : MonoBehaviour
 
     public void unlockControl()
     {
-        if (playerLevel.levelAmount >= 100)
+        if (playerLevel.levelAmount >= 150)
         {
             //Unlock Control
             alters[1].SetActive(false);
             rocks[3].SetActive(true);
             rocks[4].SetActive(true);
             rocks[5].SetActive(true);
-            playerLevel.levelAmount -= 100;
+            playerLevel.levelAmount -= 150;
             alterPanels[1].SetActive(false);
             allAlterPanel.SetActive(false);
             PauseController.SetPause(false);
@@ -94,14 +94,14 @@ public class RadioMaker : MonoBehaviour
 
     public void unlockAntenna()
     {
-        if (playerLevel.levelAmount >= 100)
+        if (playerLevel.levelAmount >= 200)
         {
             //Unlock Antenna
             alters[2].SetActive(false);
             rocks[6].SetActive(true);
             rocks[7].SetActive(true);
             rocks[8].SetActive(true);
-            playerLevel.levelAmount -= 100;
+            playerLevel.levelAmount -= 200;
             alterPanels[2].SetActive(false);
             allAlterPanel.SetActive(false);
             PauseController.SetPause(false);

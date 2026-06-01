@@ -7,6 +7,8 @@ public class Trade : MonoBehaviour
    public InventoryController inventory;
    public PlayerLevel playerLevel;
    public TextMeshProUGUI infoText;
+    public WarningMessagePanel warn;
+    private bool warningShown = false;
 
     public void OnBuyItem()
     {
@@ -17,6 +19,11 @@ public class Trade : MonoBehaviour
         }
         else
         {
+            if (inventory.isInventoryFull())
+            {
+                warn.showWarning("Inventory Full", 2f);
+                return;
+            }
             inventory.AddItem(shopItem.itemPrefab);
             playerLevel.loseLevel(shopItem.itemCost);
         }

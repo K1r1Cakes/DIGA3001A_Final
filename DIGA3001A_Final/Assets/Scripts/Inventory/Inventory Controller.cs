@@ -11,6 +11,8 @@ public class InventoryController : MonoBehaviour
     public TextMeshProUGUI itemNameLabel;
 
     public GameObject[] itemPrefabs;
+    public WarningMessagePanel warn;
+    private bool warningShown = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -78,6 +80,7 @@ public class InventoryController : MonoBehaviour
     public bool AddItem(GameObject itemPrefab)
     {
         //Look for empty slot
+
         foreach(Transform slotTransform in inventoryPanel.transform)
         {
             Slot slot = slotTransform.GetComponent<Slot>();
@@ -102,51 +105,7 @@ public class InventoryController : MonoBehaviour
         return false;
     }
 
-    // public bool RemoveItem(string itemName)
-    // {
-    //     foreach (Transform slotTransform in inventoryPanel.transform)
-    //     {
-    //         Slot slot = slotTransform.GetComponent<Slot>();
 
-    //         if (slot == null || slot.currentItem == null) continue;
-            
-    //             //Compare prefab names
-    //             Item item = slot.currentItem.GetComponent<Item>();
-
-    //             if (item != null && item.itemName == itemName)
-    //             {
-    //                 GameObject itemToRemove = slot.currentItem;
-    //                 slot.currentItem = null;
-    //                 Destroy(itemToRemove);
-                    
-
-    //                 Debug.Log("Item used");
-    //                 return true;
-    //             }
-            
-    //     }
-    //     return false;
-    // }
-
-//    public bool RemoveItem(GameObject itemObject)
-// {
-//     foreach (Transform slotTransform in inventoryPanel.transform)
-//     {
-//         Slot slot = slotTransform.GetComponent<Slot>();
-
-//         if (slot != null && slot.currentItem == itemObject)
-//         {
-//             slot.currentItem = null;
-
-//             Destroy(itemObject);
-
-//             Debug.Log("Item removed");
-//             return true;
-//         }
-//     }
-
-//     return false;
-// } 
 
 public bool RemoveItemFromSlot(Slot targetSlot)
 {
@@ -162,7 +121,20 @@ public bool RemoveItemFromSlot(Slot targetSlot)
     return false;
 }
 
+public bool isInventoryFull()
+    {
+        foreach (Transform slotTransform in inventoryPanel.transform)
+        {
+            Slot slot = slotTransform.GetComponent<Slot>();
 
+            if (slot != null && slot.currentItem == null)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
 public int GetItemCount(Item itemToCheck)
 {
     int count = 0;
