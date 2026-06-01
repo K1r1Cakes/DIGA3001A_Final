@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 public class ButtonActions : MonoBehaviour, IPointerEnterHandler
 {
     private Dialogue dialogue;
+    public GameObject controlPanel;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -38,6 +39,14 @@ public class ButtonActions : MonoBehaviour, IPointerEnterHandler
     public void onIntroScene()
     {
         SceneManager.LoadScene("Introduction");
+    }
+
+    public void onControls()
+    {
+         if (controlPanel != null)
+        {
+            controlPanel.SetActive(!controlPanel.activeSelf);
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
