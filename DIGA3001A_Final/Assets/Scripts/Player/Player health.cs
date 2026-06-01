@@ -8,6 +8,7 @@ public class Playerhealth : MonoBehaviour
     public float healthAmount = 100f;
     public GameObject deathPanel;
     public WarningMessagePanel warn;
+    public PlayerDamage playerDamage;
     private bool warningShown = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,6 +25,7 @@ public class Playerhealth : MonoBehaviour
     public void TakeDamage(float damage)
     {
         healthAmount -= damage;
+        StartCoroutine(playerDamage.damageFlash());
         healthBar.fillAmount = healthAmount / 100f;
 
         if(healthAmount > 20)
