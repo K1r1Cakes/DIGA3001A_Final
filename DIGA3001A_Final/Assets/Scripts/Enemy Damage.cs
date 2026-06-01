@@ -1,16 +1,21 @@
 using UnityEngine;
+using System.Collections;
 
 public class EnemyDamage : MonoBehaviour
 {
-    public float totalEnemyHealth = 30f;
+    public float totalEnemyHealth = 40f;
     public float enemyDamage = 10f;
     public GameObject experience;
     public PlayerSword playerSword;
+    private SpriteRenderer spriteRenderer;
+    private Color originalColor;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-         playerSword = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSword>();
+        playerSword = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSword>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
     }
 
     // Update is called once per frame
@@ -24,6 +29,7 @@ public class EnemyDamage : MonoBehaviour
         if (collision.CompareTag("Bullet"))
         {
             Debug.Log("Enemy Damage"); 
+            StartCoroutine(DamageFlash());
            totalEnemyHealth -= enemyDamage;
  
                 Bullet bullet = collision.GetComponent<Bullet>();
@@ -47,7 +53,8 @@ public class EnemyDamage : MonoBehaviour
         if (collision.CompareTag("SwordRange") && playerSword.isSwinging == true)
         {
             totalEnemyHealth -= enemyDamage;
-
+            StartCoroutine(DamageFlash());
+            
              if (totalEnemyHealth <= 0)
             {
                Debug.Log("Enemy dead");
@@ -57,6 +64,15 @@ public class EnemyDamage : MonoBehaviour
                
             }
         }
+    }
+
+     IEnumerator DamageFlash()
+    {
+        spriteRenderer.color = Color.red;
+
+        yield return new WaitForSeconds(0.2f);
+
+        spriteRenderer.color = originalColor;
     }
 
 }
