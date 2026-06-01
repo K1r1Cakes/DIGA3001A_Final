@@ -26,7 +26,7 @@ public class PlayerDamage : MonoBehaviour
         {
             Debug.Log("Player Damage");
             playerhealth.TakeDamage(health);
-
+            SoundEffectManager.Play("playerDamage");
             StartCoroutine(damageFlash());
         }
     }

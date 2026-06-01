@@ -7,6 +7,7 @@ public class DialogueButton : MonoBehaviour
         if (DialogueTriggers.currentDialogue != null)
         {
             DialogueTriggers.currentDialogue.NextLine();
+            SoundEffectManager.Play("Next");
         }
     }
 }

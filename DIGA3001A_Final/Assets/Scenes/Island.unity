@@ -85398,6 +85398,51 @@ MonoBehaviour:
   - name: Eat
     audioClips:
     - {fileID: 8300000, guid: 8aded67ad9356dd4fb33719d28e6cc4c, type: 3}
+  - name: Drink
+    audioClips:
+    - {fileID: 8300000, guid: bf54d35242b103b47b021f8eca9113c9, type: 3}
+  - name: Heal
+    audioClips:
+    - {fileID: 8300000, guid: 1ea4a9b262fc9504ea12ff7b66cab9b3, type: 3}
+  - name: EnemyDamage
+    audioClips:
+    - {fileID: 8300000, guid: f15013d672089aa4581f7dad679cfede, type: 3}
+  - name: radioUse
+    audioClips:
+    - {fileID: 8300000, guid: a1e04271278750d4b9f1a5ba759310a9, type: 3}
+  - name: itemUse
+    audioClips:
+    - {fileID: 8300000, guid: 107314262df72a84699c3eb767de5469, type: 3}
+  - name: itemCollect
+    audioClips:
+    - {fileID: 8300000, guid: ee8fef8d74a8a3044951b74098e3d65b, type: 3}
+  - name: orbCollect
+    audioClips:
+    - {fileID: 8300000, guid: 53fa769fb3d90f842b68f08e55512f4a, type: 3}
+  - name: playerDamage
+    audioClips:
+    - {fileID: 8300000, guid: 5184ba23314a4424a91b1e66b3d62622, type: 3}
+  - name: Shoot
+    audioClips:
+    - {fileID: 8300000, guid: e227cac7d9d957c41b6884b552b74929, type: 3}
+  - name: Swoosh
+    audioClips:
+    - {fileID: 8300000, guid: 879cf77e89fefc9479580a55d890f849, type: 3}
+  - name: Break
+    audioClips:
+    - {fileID: 8300000, guid: 8d92a461318825e42b7aa27038f3516f, type: 3}
+  - name: Walk
+    audioClips:
+    - {fileID: 8300000, guid: 69cb92613293edf46955d58faa5594ea, type: 3}
+  - name: itemSelect
+    audioClips:
+    - {fileID: 8300000, guid: 9578a89844bc3f64f9ba10c54326d11f, type: 3}
+  - name: Alert
+    audioClips:
+    - {fileID: 8300000, guid: aed8542b143ecd24fa96201be3848136, type: 3}
+  - name: Next
+    audioClips:
+    - {fileID: 8300000, guid: fa23bcaa25123234587135e617410145, type: 3}
 --- !u!82 &1011717170
 AudioSource:
   m_ObjectHideFlags: 0
@@ -96256,7 +96301,7 @@ MonoBehaviour:
   - {fileID: 971382780}
   cherry: {fileID: 2920887495875229284, guid: 84a5b770d0cd74b4891db8b9f9175b78, type: 3}
   foodTimer: 0
-  timeBetweenFoodSpawns: 5
+  timeBetweenFoodSpawns: 20
 --- !u!114 &1758853474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96324,7 +96369,7 @@ MonoBehaviour:
   - {fileID: 560744262}
   enemy: {fileID: 4393454901865770966, guid: 5aa3ab70845c8184096815452fc81377, type: 3}
   enemyTimer: 0
-  timeBetweenEnemySpawns: 10
+  timeBetweenEnemySpawns: 20
 --- !u!1 &1778997949
 GameObject:
   m_ObjectHideFlags: 0

@@ -51,6 +51,7 @@ public class ItemSelect : MonoBehaviour, IPointerClickHandler
 
                      Debug.Log("Item selected");
                      useItem.useButton.interactable = true;
+                     SoundEffectManager.Play("itemSelect");
                      isItemSelected = true;
                 }
             }

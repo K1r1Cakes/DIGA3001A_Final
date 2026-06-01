@@ -20,7 +20,7 @@ public class WarningMessagePanel : MonoBehaviour
 
     public void showWarning(string message, float displayTime)
     {
-
+        SoundEffectManager.Play("Alert");
     Debug.Log("ShowWarning called");
 
         if (currentWarning != null)

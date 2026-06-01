@@ -56,7 +56,7 @@ public class PlayerShoot : MonoBehaviour
             return;
         }
 
-        
+            SoundEffectManager.Play("Shoot");
             Instantiate(bulletPrefab, transform.position, transform.rotation);
             bulletAmount -= 1;
             Debug.Log("Shoot"); 

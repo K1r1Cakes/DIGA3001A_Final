@@ -4,7 +4,7 @@ using System.Collections;
 using UnityEditor;
 using UnityEngine.SceneManagement;
 
-public class Dialogue : MonoBehaviour
+public class EndDialogue : MonoBehaviour
 {
     public TextMeshProUGUI dialogueText;
     public string[] lines;
@@ -49,7 +49,7 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("Island");
+            SceneManager.LoadScene("Start Menu");
             
         }
     }

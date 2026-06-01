@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class ButtonActions : MonoBehaviour
+using UnityEngine.EventSystems;
+public class ButtonActions : MonoBehaviour, IPointerEnterHandler
 {
     private Dialogue dialogue;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -37,5 +38,10 @@ public class ButtonActions : MonoBehaviour
     public void onIntroScene()
     {
         SceneManager.LoadScene("Introduction");
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        SoundEffectManager.Play("Hover");
     }
 }

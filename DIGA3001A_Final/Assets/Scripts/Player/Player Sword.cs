@@ -53,7 +53,7 @@ public class PlayerSword : MonoBehaviour
     private IEnumerator swingSword()
     {
         isSwinging = true;
-
+        SoundEffectManager.Play("Swoosh");
         swordRange.SetActive(true);
 
         yield return new WaitForSeconds(swingTime);
@@ -64,6 +64,7 @@ public class PlayerSword : MonoBehaviour
 
         if (currentStick.stickLifeSpan <= 0)
         {
+            SoundEffectManager.Play("Break");
             inventory.RemoveItemFromSlot(hotBarController.selectedItem.parentSlot);
         }
         

@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
      public void Move(InputAction.CallbackContext context)
     {
         animator.SetBool("isWalking", true);
+        SoundEffectManager.Play("Walk");
 
         if (context.canceled)
         {

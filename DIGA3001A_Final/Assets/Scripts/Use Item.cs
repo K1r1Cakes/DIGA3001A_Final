@@ -35,6 +35,7 @@ public class UseItem : MonoBehaviour
         if(currentItem.itemName == "Water")
         {
             Debug.Log("Drink water");
+            SoundEffectManager.Play("Drink");
             thirst.fillThirst(10);
             itemStatusText.text = "Water consumed";
             isHotBar = false;
@@ -55,6 +56,7 @@ public class UseItem : MonoBehaviour
         if (currentItem.itemName == "Health")
         {
             Debug.Log("Heal up");
+            SoundEffectManager.Play("Heal");
             health.fillHealth(10);
             itemStatusText.text = "Medkit consumed";
             isHotBar = false;
@@ -63,6 +65,7 @@ public class UseItem : MonoBehaviour
         if (currentItem.itemName == "Coconut")
         {
             Debug.Log("Bullets added");
+            SoundEffectManager.Play("itemUse");
             shoot.bulletAmount += 5;
             itemStatusText.text = "Coconut added";
             isHotBar = false;
@@ -70,19 +73,22 @@ public class UseItem : MonoBehaviour
 
         if (currentItem.itemName == "Gun")
         {
+            SoundEffectManager.Play("itemUse");
             itemStatusText.text = "Put in hotbar to use";
             isHotBar = true;
         }
 
         if (currentItem.itemName == "Stick")
         {
+            SoundEffectManager.Play("itemUse");
             itemStatusText.text = "Put in hotbar to use";
             isHotBar = true;
         }
 
         if (currentItem.itemName == "Micro Controller")
         {
-            itemStatusText.text = "Added to radio";
+            SoundEffectManager.Play("radioUse");
+            itemStatusText.text = "Added to radio, Forest unlocked";
             radioMaker.isMicro = true;
             radioMaker.unlockForest();
             isHotBar = false;
@@ -90,7 +96,8 @@ public class UseItem : MonoBehaviour
 
         if (currentItem.itemName == "Controls")
         {
-            itemStatusText.text = "Added to radio";
+            SoundEffectManager.Play("radioUse");
+            itemStatusText.text = "Added to radio, Desert unlocked";
             radioMaker.isControl = true;
             radioMaker.unlockDesert();
             isHotBar = false;
@@ -98,7 +105,8 @@ public class UseItem : MonoBehaviour
 
         if (currentItem.itemName == "Antenna")
         {
-            itemStatusText.text = "Added to radio";
+            SoundEffectManager.Play("radioUse");
+            itemStatusText.text = "Added to radio, radio made";
             radioMaker.isAntenna = true;
             isHotBar = false;
         }

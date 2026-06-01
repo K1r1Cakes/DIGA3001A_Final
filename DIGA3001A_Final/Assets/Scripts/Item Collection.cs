@@ -34,6 +34,7 @@ public class ItemCollection : MonoBehaviour
                 return;
             }
 
+            SoundEffectManager.Play("itemCollect");
             inventoryController.AddItem(itemPrefab);
             Destroy(itemPrefab);
             itemPrefab = null;

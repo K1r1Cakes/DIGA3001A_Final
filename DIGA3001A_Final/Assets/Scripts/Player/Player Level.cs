@@ -31,6 +31,7 @@ public class PlayerLevel : MonoBehaviour
     {
         if (collide.CompareTag("Experience"))
         {
+            SoundEffectManager.Play("orbCollect");
             gainLevel(experienceAmount);
             Destroy(collide.gameObject);
         }

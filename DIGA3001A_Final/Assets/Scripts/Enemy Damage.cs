@@ -30,6 +30,7 @@ public class EnemyDamage : MonoBehaviour
         {
             Debug.Log("Enemy Damage"); 
             StartCoroutine(DamageFlash());
+            SoundEffectManager.Play("EnemyDamage");
            totalEnemyHealth -= enemyDamage;
  
                 Bullet bullet = collision.GetComponent<Bullet>();
@@ -53,8 +54,9 @@ public class EnemyDamage : MonoBehaviour
         if (collision.CompareTag("SwordRange") && playerSword.isSwinging == true)
         {
             totalEnemyHealth -= enemyDamage;
+            SoundEffectManager.Play("EnemyDamage");
             StartCoroutine(DamageFlash());
-            
+
              if (totalEnemyHealth <= 0)
             {
                Debug.Log("Enemy dead");
